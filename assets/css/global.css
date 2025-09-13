@@ -69,6 +69,24 @@ p, li, span {
   color: var(--muted-gray);
 }
 
+/* Page Header Section - Flush Top Design Utility */
+.page-header-section {
+  margin-top: 0 !important;
+  padding-top: 6rem !important;
+}
+
+/* Responsive adjustments for flush-top spacing */
+@media (max-width: 991.98px) {
+  .page-header-section {
+    padding-top: 4rem !important;
+  }
+}
+
+/* Light page header modifier for pages without hero backgrounds */
+.page-header-section.page-header--light {
+  background-color: #F8F9FA !important;
+}
+
 /* New Flush Hero Section - Premium Design */
 .hero-flush {
   position: relative;
