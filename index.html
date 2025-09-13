@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Modern static website built with Bootstrap framework and responsive design">
+    <meta name="author" content="TechSite">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="TechSite - Modern Web Development">
+    <meta property="og:description" content="Build amazing websites with modern technology and responsive design">
+    <meta property="og:type" content="website">
+    
+    <title>TechSite - Modern Web Development</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Component CSS Files -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/components/navbar.css">
+    <link rel="stylesheet" href="assets/css/components/hero.css">
+    <link rel="stylesheet" href="assets/css/components/feature-card.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/about-us.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="site-header"></div>
+    
+    <!-- Hero Section -->
+    <div id="hero-section"></div>
+    
+    <!-- IT Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold">
+                        Reach out to the world's most reliable 
+                        <span class="text-primary position-relative">
+                            IT services
+                            <span class="position-absolute bottom-0 start-0 w-100" style="height: 3px; background: #0D6EFD;"></span>
+                        </span>.
+                    </h2>
+                    <p class="lead text-muted mt-3">We offer a complete suite of solutions to help your business grow.</p>
+                </div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="row g-4 align-items-center">
+
+                <!-- Card 1: Custom Software -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="d-inline-flex justify-content-center align-items-center rounded-3 bg-primary text-white" style="width: 48px; height: 48px;">
+                                    <i class="bi bi-code-slash fs-4"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Custom Software</h5>
+                            <p class="card-text text-muted">We provide custom software development for your business, billing, inventory, and every custom solution.</p>
+                            <a href="/pages/services/custom-development.html" class="text-primary fw-semibold text-decoration-none">Discover now →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Website Design -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="d-inline-flex justify-content-center align-items-center rounded-3 bg-primary text-white" style="width: 48px; height: 48px;">
+                                    <i class="bi bi-globe fs-4"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Website Design</h5>
+                            <p class="card-text text-muted">We provide website design & development to make your business online to drive more customers and sales.</p>
+                            <a href="/pages/services/web-development.html" class="text-primary fw-semibold text-decoration-none">Discover now →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: App Development -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="d-inline-flex justify-content-center align-items-center rounded-3 bg-primary text-white" style="width: 48px; height: 48px;">
+                                    <i class="bi bi-phone fs-4"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">App Development</h5>
+                            <p class="card-text text-muted">We provide Android & iOS app development. Turn your idea into reality and start your startup with us.</p>
+                            <a href="/pages/services/app-development.html" class="text-primary fw-semibold text-decoration-none">Discover now →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Digital Marketing -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="d-inline-flex justify-content-center align-items-center rounded-3 bg-primary text-white" style="width: 48px; height: 48px;">
+                                    <i class="bi bi-megaphone fs-4"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Digital Marketing</h5>
+                            <p class="card-text text-muted">We provide the best digital marketing services to drive more traffic on your mobile app or website.</p>
+                            <a href="/pages/services/digital-marketing.html" class="text-primary fw-semibold text-decoration-none">Discover now →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- === CENTRAL ILLUSTRATION === -->
+                <!-- This is visible only on large screens, replacing a card slot -->
+                <div class="col-lg-4 d-none d-lg-block text-center">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=400&q=80" 
+                         alt="IT Professional at work" class="img-fluid rounded-4" style="max-height: 300px; object-fit: cover;">
+                </div>
+                
+                <!-- Card 5: Domain & Hosting -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="d-inline-flex justify-content-center align-items-center rounded-3 bg-primary text-white" style="width: 48px; height: 48px;">
+                                    <i class="bi bi-hdd-network fs-4"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Domain & Hosting</h5>
+                            <p class="card-text text-muted">We provide domain, hosting and reliable servers to never let your business down.</p>
+                            <a href="/pages/services/web-development.html" class="text-primary fw-semibold text-decoration-none">Discover now →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: ERP & CRM -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="d-inline-flex justify-content-center align-items-center rounded-3 bg-primary text-white" style="width: 48px; height: 48px;">
+                                    <i class="bi bi-diagram-3 fs-4"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">ERP & CRM Development</h5>
+                            <p class="card-text text-muted">We provide ERP & CRM to automate your business with fast execution and precise strategies.</p>
+                            <a href="/pages/solutions/crm-erp.html" class="text-primary fw-semibold text-decoration-none">Discover now →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Maintenance -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="d-inline-flex justify-content-center align-items-center rounded-3 bg-primary text-white" style="width: 48px; height: 48px;">
+                                    <i class="bi bi-tools fs-4"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Maintenance Services</h5>
+                            <p class="card-text text-muted">We provide annual maintenance services for websites, software, ERP, CRM & mobile apps.</p>
+                            <a href="/pages/services/maintenance-support.html" class="text-primary fw-semibold text-decoration-none">Discover now →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 8: Explore More -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <span class="d-inline-flex justify-content-center align-items-center rounded-3 bg-primary text-white" style="width: 48px; height: 48px;">
+                                    <i class="bi bi-plus-circle fs-4"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Explore More Services</h5>
+                            <p class="card-text text-muted">We provide IT training, internships, MLM software and many more services to discover.</p>
+                            <a href="/pages/services.html" class="text-primary fw-semibold text-decoration-none">Discover now →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Us Section -->
+    <div id="about-us-section"></div>
+    
+    <!-- Why Choose Us Section -->
+    <div id="why-choose-us-section"></div>
+    
+    <!-- Portfolio Snapshot Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">Our Proven Track Record</h2>
+                    <p class="lead text-muted">Discover the success stories and impactful solutions we've delivered for our clients</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" 
+                                             class="d-block w-100 rounded shadow" alt="E-commerce Platform">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4">
+                                            <h3 class="fw-bold mb-3">E-commerce Platform Development</h3>
+                                            <p class="text-muted mb-4">Built a comprehensive e-commerce solution that increased online sales by 300% for our retail client.</p>
+                                            <button class="btn btn-primary">View Case Study</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" 
+                                             class="d-block w-100 rounded shadow" alt="Mobile Banking App">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4">
+                                            <h3 class="fw-bold mb-3">Mobile Banking Application</h3>
+                                            <p class="text-muted mb-4">Developed a secure, user-friendly banking app that serves over 50,000 active users daily.</p>
+                                            <button class="btn btn-primary">View Case Study</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" 
+                                             class="d-block w-100 rounded shadow" alt="Healthcare Management System">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4">
+                                            <h3 class="fw-bold mb-3">Healthcare Management System</h3>
+                                            <p class="text-muted mb-4">Created an integrated healthcare platform that streamlined operations for a network of 25 clinics.</p>
+                                            <button class="btn btn-primary">View Case Study</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <img src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?auto=format&fit=crop&w=800&q=80" 
+                                             class="d-block w-100 rounded shadow" alt="EdTech Learning Platform">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-4">
+                                            <h3 class="fw-bold mb-3">EdTech Learning Platform</h3>
+                                            <p class="text-muted mb-4">Built an innovative learning management system that improved student engagement by 250%.</p>
+                                            <button class="btn btn-primary">View Case Study</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Case Studies Section -->
+    <div id="case-studies-section"></div>
+    
+    <!-- Trusted By Section -->
+    <div id="trusted-by-section"></div>
+    
+    <!-- Latest Blogs Section -->
+    <div id="latest-blogs-section"></div>
+    
+    <!-- Combined Testimonial & CTA Section -->
+    <div id="testimonial-cta-section"></div>
+    
+    <!-- Bottom CTA Section -->
+    <div id="bottom-cta-section"></div>
+    
+    <!-- Footer -->
+    <div id="site-footer"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Component Loader -->
+    <script src="assets/js/components.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

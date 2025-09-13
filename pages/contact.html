@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact TechSite - Get in touch with our web development team">
+    <meta name="author" content="TechSite">
+    
+    <title>Contact Us - TechSite</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Component CSS Files -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components/navbar.css">
+    <link rel="stylesheet" href="../assets/css/components/contact.css">
+    <link rel="stylesheet" href="../assets/css/components/footer.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="site-header"></div>
+    
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4" data-testid="text-contact-title">Get In Touch</h1>
+                    <p class="lead mb-5" data-testid="text-contact-subtitle">
+                        Ready to start your next project? We'd love to hear from you. 
+                        Send us a message and we'll respond as soon as possible.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-5">
+                            <form id="contactForm" data-testid="form-contact">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName" required data-testid="input-first-name">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name *</label>
+                                        <input type="text" class="form-control" id="lastName" required data-testid="input-last-name">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required data-testid="input-email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="company" class="form-label">Company</label>
+                                    <input type="text" class="form-control" id="company" data-testid="input-company">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <select class="form-select" id="subject" required data-testid="select-subject">
+                                        <option value="">Choose a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="project">New Project</option>
+                                        <option value="support">Support</option>
+                                        <option value="partnership">Partnership</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" rows="5" required data-testid="textarea-message"></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-custom" data-testid="button-send-message">
+                                        <i class="bi bi-send me-2"></i>
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Info Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="bi bi-geo-alt fs-4"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Visit Us</h5>
+                    <p class="text-muted mb-0">123 Tech Street<br>San Francisco, CA 94102</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="bi bi-telephone fs-4"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Call Us</h5>
+                    <p class="text-muted mb-0">+1 (555) 123-4567<br>Mon-Fri 9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="bi bi-envelope fs-4"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Email Us</h5>
+                    <p class="text-muted mb-0">hello@techsite.com<br>support@techsite.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <div id="site-footer"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Component Loader -->
+    <script src="../assets/js/components.js"></script>
+    <!-- Contact Page JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adjust component paths for subdirectory
+            const componentLoader = new ComponentLoader();
+            componentLoader.loadComponent('#site-header', '../components/navbar.html');
+            componentLoader.loadComponent('#site-footer', '../components/footer.html');
+            
+            // Contact form handling
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                    company: document.getElementById('company').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+                
+                console.log('Contact form submitted:', formData);
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                contactForm.reset();
+            });
+        });
+    </script>
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

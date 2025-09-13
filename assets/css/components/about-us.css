@@ -1,0 +1,120 @@
+/* About Us Component Styles */
+
+.about-us-image-container {
+    position: relative;
+    border: 3px solid #D48C00; /* Gold border */
+    border-radius: 1.25rem;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.about-us-rating-btn {
+    background-color: #D48C00; /* Gold background */
+    border: 2px solid #D48C00;
+    color: #212529 !important;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.about-us-rating-btn:hover {
+    background-color: #B8761A;
+    border-color: #B8761A;
+    color: #212529 !important;
+    transform: translateY(-2px);
+}
+
+.about-us-rating-btn .bi-star-fill {
+    color: #FFF;
+}
+
+/* Location Markers */
+.location-markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #0D6EFD;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+.marker::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #0D6EFD;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Position markers on the world map */
+.marker-1 { top: 25%; left: 20%; } /* North America */
+.marker-2 { top: 35%; left: 45%; } /* Europe */
+.marker-3 { top: 40%; left: 60%; } /* Asia */
+.marker-4 { top: 55%; left: 15%; } /* South America */
+.marker-5 { top: 55%; left: 50%; } /* Africa */
+.marker-6 { top: 30%; left: 70%; } /* East Asia */
+.marker-7 { top: 65%; left: 75%; } /* Australia */
+.marker-8 { top: 45%; left: 25%; } /* Atlantic */
+
+/* Pulse animation for markers */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .about-us-image-container {
+        margin-top: 2rem;
+    }
+    
+    .d-flex.flex-wrap.gap-3 {
+        justify-content: center;
+    }
+    
+    .d-flex.flex-wrap.gap-3 .btn {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    .d-flex.flex-wrap.gap-3 .btn {
+        width: 100%;
+        min-width: auto;
+    }
+}

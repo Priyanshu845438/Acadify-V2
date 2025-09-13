@@ -1,0 +1,604 @@
+/* Global Design System - Professional & Cohesive Styling */
+/* Technology: Pure Bootstrap 5.3+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400&display=swap');
+
+/* Color Palette Variables - Bootstrap 5.3+ Compliant */
+:root {
+  /* Bootstrap Variable Overrides - The Right Way */
+  --bs-primary: #0D6EFD;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-light: #F8F9FA;
+  --bs-dark: #212529;
+  --bs-body-color: #495057;
+  --bs-body-bg: #FFFFFF;
+  
+  /* Custom Design System Variables - Alias to Bootstrap tokens for consistency */
+  --primary-blue: var(--bs-primary);
+  --dark-charcoal: var(--bs-dark);
+  --muted-gray: var(--bs-body-color);
+  --light-gray: var(--bs-light);
+  --white: var(--bs-body-bg);
+  
+  /* Shadow System */
+  --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+  --shadow-hover: 0 .5rem 1rem rgba(0,0,0,.15);
+  
+  /* Transitions */
+  --transition-base: all 0.3s ease-in-out;
+}
+
+/* Typography System */
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--muted-gray);
+  background-color: var(--white);
+}
+
+/* Headings Typography - All headings use Poppins as per spec */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--dark-charcoal);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* Body Text */
+p, li, span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--muted-gray);
+}
+
+/* Lead Text */
+.lead {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--muted-gray);
+}
+
+/* Button System */
+.btn {
+  border-radius: 50rem !important; /* .rounded-pill */
+  padding: 12px 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: var(--transition-base);
+  border-width: 2px;
+}
+
+/* Primary CTA Buttons - Solid Blue */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-white);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Secondary Buttons - Outline */
+.btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-white);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Light/White Buttons */
+.btn-light {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--primary-blue);
+}
+
+.btn-light:hover,
+.btn-light:focus {
+  background-color: var(--bs-white);
+  border-color: var(--bs-white);
+  color: var(--bs-primary);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Button Sizes */
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+}
+
+.btn-sm {
+  padding: 8px 20px;
+  font-size: 0.875rem;
+}
+
+/* Card System */
+.card {
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.375rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  background-color: var(--white);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Custom Spacing Classes - Don't override Bootstrap utilities */
+section {
+  padding: 5rem 0; /* Generous section spacing */
+}
+
+/* Custom spacing utilities instead of overriding Bootstrap */
+.section-space {
+  padding: 5rem 0;
+}
+
+.space-y-lg {
+  margin-bottom: 5rem;
+}
+
+.space-y-md {
+  margin-bottom: 3rem;
+}
+
+/* Custom Background Classes - Don't override Bootstrap utilities */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--primary-blue), #0B5ED7) !important;
+}
+
+/* Custom Text Utilities - Use Bootstrap variables only */
+/* Removed .text-* overrides for Bootstrap 5.3+ compliance */
+
+/* Link Styling */
+a {
+  color: var(--bs-primary);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--bs-primary);
+  opacity: 0.8;
+}
+
+/* Navigation Dropdowns */
+.dropdown-menu {
+  border: 1px solid rgba(0,0,0,.15);
+  box-shadow: var(--shadow-hover);
+  border-radius: 0.375rem;
+}
+
+.dropdown-item {
+  font-family: 'Roboto', sans-serif;
+  color: var(--muted-gray);
+  padding: 0.75rem 1.5rem;
+  transition: var(--transition-base);
+}
+
+.dropdown-item:hover {
+  background-color: var(--light-gray);
+  color: var(--primary-blue);
+}
+
+/* Form Controls */
+.form-control {
+  border: 2px solid #DEE2E6;
+  border-radius: 0.375rem;
+  padding: 12px 16px;
+  font-family: 'Roboto', sans-serif;
+  transition: var(--transition-base);
+}
+
+.form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Icon Styling */
+.bi {
+  color: var(--bs-primary);
+}
+
+/* Display Utilities */
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--dark-charcoal);
+}
+
+/* Utility Classes */
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.fw-medium {
+  font-weight: 600 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .btn-lg {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 2rem 0;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Animation System */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Dark Theme Support */
+[data-bs-theme="dark"] {
+  --white: #212529;
+  --light-gray: #2D3136;
+  --muted-gray: #ADB5BD;
+  --dark-charcoal: #F8F9FA;
+}
+
+[data-bs-theme="dark"] body {
+  background-color: var(--white);
+  color: var(--muted-gray);
+}
+
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5,
+[data-bs-theme="dark"] h6 {
+  color: var(--dark-charcoal);
+}
+
+[data-bs-theme="dark"] .card {
+  background-color: var(--light-gray);
+  border-color: #495057;
+}
+
+[data-bs-theme="dark"] .dropdown-menu {
+  background-color: var(--light-gray);
+  border-color: #495057;
+}
+
+[data-bs-theme="dark"] .dropdown-item {
+  color: var(--muted-gray);
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover {
+  background-color: #495057;
+  color: var(--primary-blue);
+}
+
+/* Service Cards Enhanced Hover Effect */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Blue underline accent for IT services */
+.text-primary .position-absolute {
+  transition: width 0.3s ease;
+}
+
+/* Advantage Cards Enhanced Styling */
+.advantage-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Feature Icon Consistent Sizing */
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Case Studies Component Styling */
+.case-study-card {
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.case-study-card .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-card:hover .card {
+  transform: translateY(-10px);
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.case-study-card .card-img-top {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.case-study-card:hover .card-img-top {
+  filter: grayscale(0%);
+}
+
+/* Custom tab styling */
+#caseStudyTabs .nav-link {
+  border: none;
+  color: #6c757d;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0;
+  position: relative;
+}
+
+#caseStudyTabs .nav-link.active {
+  color: #0D6EFD;
+  background: none;
+  border: none;
+}
+
+#caseStudyTabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: #0D6EFD;
+}
+
+.results-list {
+  line-height: 1.8;
+}
+
+/* Diagonal Testimonial & CTA Section Styling */
+.testimonial-cta-section {
+  position: relative;
+  background-color: #f8f9fa; /* The light gray for the left side */
+  overflow: hidden; /* Important for the pseudo-element */
+}
+
+/* This pseudo-element creates the blue diagonal shape */
+.testimonial-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0D6EFD; /* The primary blue */
+  
+  /* The magic for the diagonal cut */
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 40% 100%);
+  
+  z-index: 1;
+}
+
+/* Custom styles for carousel controls to match the professional look */
+.carousel-controls {
+  position: relative;
+  width: 100px;
+}
+.carousel-controls .carousel-control-prev,
+.carousel-controls .carousel-control-next {
+  position: static;
+  display: inline-block;
+  opacity: 0.7;
+  background: none;
+  border: none;
+}
+.carousel-controls .carousel-control-prev:hover,
+.carousel-controls .carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* --- MOBILE RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 991.98px) {
+  /* On tablets and mobile, remove the diagonal cut */
+  .testimonial-cta-section::before {
+    clip-path: none; /* Disables the clip-path */
+    height: 50%;     /* Makes the blue cover the bottom half */
+    top: 50%;        /* Positions the blue at the bottom */
+  }
+  
+  /* We need to re-style the section to stack properly */
+  .testimonial-cta-section {
+    background-color: #f8f9fa; /* Top half background */
+  }
+  
+  .testimonial-cta-section .col-lg-6 {
+     text-align: center !important; /* Center all text on mobile */
+  }
+}
+
+/* Trusted By Logo Slider Styling */
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-slider__track {
+  display: flex;
+  width: calc(200px * 16); /* (width of one logo) * (total number of logos, including duplicates) */
+  animation: scroll 40s linear infinite;
+}
+
+.logo-slider:hover .logo-slider__track {
+  animation-play-state: paused;
+}
+
+.logo-slider__item {
+  width: 200px;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.logo-slider__item img {
+  max-width: 150px;
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.logo-slider__item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8)); /* (width of one logo) * (number of ORIGINAL logos) */
+  }
+}
+
+/* Mobile Responsive for Logo Slider */
+@media (max-width: 767.98px) {
+  .logo-slider__item {
+    width: 150px;
+    padding: 0 15px;
+  }
+  
+  .logo-slider__item img {
+    max-width: 120px;
+    height: 50px;
+  }
+
+  .logo-slider__track {
+    width: calc(150px * 16); /* (new mobile width) * (total logos) */
+  }
+  
+  @keyframes scroll {
+    100% {
+      transform: translateX(calc(-150px * 8)); /* (new mobile width) * (original logos) */
+    }
+  }
+}
+
+/* Latest Blogs Component Styling */
+.blog-card {
+  background-color: #FFFBEB !important; /* Creamy-beige background */
+  border: 1px solid #FDEEC9 !important; /* Slightly darker border */
+  border-radius: 1rem !important; /* Softer, more pronounced rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.blog-card .card-img-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card .read-more-link {
+  color: #D48C00; /* Mustard-yellow color */
+}
+
+.blog-card .read-more-link:hover {
+  color: #A06800; /* Darker shade on hover */
+  text-decoration: underline !important;
+}

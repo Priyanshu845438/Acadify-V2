@@ -1,0 +1,79 @@
+/* Feature Card Component Styles */
+
+.card-hover {
+  transition: all 0.3s ease-in-out;
+  border: none;
+  overflow: hidden;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-bs-theme="dark"] .card-hover:hover {
+  box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Feature icon styling */
+.feature-icon {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-base);
+}
+
+.card-hover:hover .feature-icon i {
+  transform: scale(1.1);
+  transition: var(--transition-base);
+}
+
+/* Feature card content */
+.card-hover .card-title {
+  color: var(--bs-dark);
+  transition: var(--transition-base);
+}
+
+[data-bs-theme="dark"] .card-hover .card-title {
+  color: var(--bs-light);
+}
+
+.card-hover:hover .card-title {
+  color: var(--bs-primary);
+}
+
+/* Feature card body */
+.card-hover .card-body {
+  position: relative;
+  z-index: 1;
+}
+
+/* Background gradient effect on hover */
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(var(--bs-primary-rgb), 0.02), 
+    rgba(var(--bs-primary-rgb), 0.08));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.card-hover:hover::before {
+  opacity: 1;
+}
+
+/* Border effect */
+.card-hover {
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.1);
+}
+
+.card-hover:hover {
+  border-color: rgba(var(--bs-primary-rgb), 0.2);
+}
