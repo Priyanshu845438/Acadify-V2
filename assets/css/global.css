@@ -11,7 +11,7 @@
   --bs-primary-rgb: 13, 50, 105;
   --bs-light: #F8F9FA;
   --bs-dark: #212529;
-  --bs-body-color: #495057;
+  --bs-body-color: #333333;
   --bs-body-bg: #FFFFFF;
   
   /* Custom Design System Variables - Alias to Bootstrap tokens for consistency */
@@ -67,6 +67,56 @@ p, li, span {
   font-weight: 400;
   font-size: 1.25rem;
   color: var(--muted-gray);
+}
+
+/* New Flush Hero Section - Premium Design */
+.hero-flush {
+  position: relative;
+  background-color: #0d3169;
+  padding: 6rem 0; /* Generous padding for content */
+  margin-top: 0; /* Ensures flush with navbar */
+  /* This pseudo-element creates the subtle tech pattern */
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding-bottom: 160px;
+}
+
+/* Style the visual element to pop */
+.hero-flush .hero-visual {
+  filter: drop-shadow(0 1rem 3rem rgba(0,0,0,0.3)); /* Soft glow effect */
+}
+
+/* The shape divider for the elegant transition */
+.hero-shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg); /* Flips the SVG */
+}
+
+.hero-shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px; /* Adjust height of the curve */
+}
+
+.hero-shape-divider .shape-fill {
+  fill: #FFFFFF; /* This should be the color of the NEXT section */
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 991.98px) {
+  .hero-flush {
+    padding: 4rem 0; /* Reduce padding on smaller screens */
+  }
+  .hero-flush .hero-visual {
+    margin-top: 2rem; /* Add space between text and image when stacked */
+  }
 }
 
 /* Button System */
@@ -228,8 +278,8 @@ a:hover {
   box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
 }
 
-/* Icon Styling */
-.bi {
+/* Icon Styling - scoped to hero section only */
+.hero-flush .bi {
   color: white;
 }
 

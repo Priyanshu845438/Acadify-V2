@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: transparent;">
+  <defs>
+    <!-- Gradients for depth and modern look -->
+    <linearGradient id="deskGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="laptopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A2540;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D6EFD;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="monitorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D6EFD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A2540;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Desk Surface (Isometric) -->
+  <path d="M50 200 L350 200 L380 170 L80 170 Z" fill="url(#deskGradient)" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Desk Front -->
+  <path d="M50 200 L50 220 L350 220 L350 200 Z" fill="#e9ecef" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Monitor Stand -->
+  <rect x="280" y="160" width="8" height="40" fill="#6c757d"/>
+  <ellipse cx="284" cy="200" rx="15" ry="6" fill="#6c757d"/>
+  
+  <!-- Large Monitor (Isometric) -->
+  <path d="M240 120 L330 120 L340 110 L250 110 Z" fill="url(#monitorGradient)" stroke="#0A2540" stroke-width="2"/>
+  <path d="M240 120 L240 160 L330 160 L330 120 Z" fill="#000" stroke="#0A2540" stroke-width="2"/>
+  <path d="M330 120 L330 160 L340 150 L340 110 Z" fill="#0D6EFD" stroke="#0A2540" stroke-width="1"/>
+  
+  <!-- Monitor Screen Content -->
+  <rect x="245" y="125" width="80" height="30" fill="#0D6EFD" opacity="0.8"/>
+  <rect x="250" y="130" width="15" height="8" fill="#fff" opacity="0.9"/>
+  <rect x="268" y="130" width="15" height="8" fill="#fff" opacity="0.7"/>
+  <rect x="250" y="140" width="25" height="3" fill="#fff" opacity="0.6"/>
+  <rect x="250" y="145" width="20" height="3" fill="#fff" opacity="0.6"/>
+  
+  <!-- Laptop (Isometric) -->
+  <path d="M120 170 L200 170 L210 160 L130 160 Z" fill="url(#laptopGradient)" stroke="#0A2540" stroke-width="1"/>
+  <path d="M120 170 L120 180 L200 180 L200 170 Z" fill="#0A2540" stroke="#fff" stroke-width="1"/>
+  
+  <!-- Laptop Screen -->
+  <path d="M125 150 L195 150 L200 145 L130 145 Z" fill="#000" stroke="#0A2540" stroke-width="1"/>
+  <rect x="130" y="150" width="60" height="15" fill="#0D6EFD" opacity="0.3"/>
+  <rect x="135" y="153" width="10" height="2" fill="#fff" opacity="0.8"/>
+  <rect x="135" y="157" width="15" height="2" fill="#fff" opacity="0.6"/>
+  
+  <!-- Professional Person (Simplified Isometric) -->
+  <!-- Head -->
+  <ellipse cx="160" cy="140" rx="8" ry="10" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Body -->
+  <path d="M150 150 L170 150 L175 180 L145 180 Z" fill="#0A2540"/>
+  
+  <!-- Arms -->
+  <ellipse cx="140" cy="165" rx="4" ry="12" fill="#0A2540" transform="rotate(-20 140 165)"/>
+  <ellipse cx="180" cy="165" rx="4" ry="12" fill="#0A2540" transform="rotate(20 180 165)"/>
+  
+  <!-- Hands on laptop -->
+  <circle cx="155" cy="172" r="3" fill="#f8f9fa"/>
+  <circle cx="175" cy="172" r="3" fill="#f8f9fa"/>
+  
+  <!-- Holographic UI Elements (Floating) -->
+  
+  <!-- Data Graph (Top Right) -->
+  <g opacity="0.7" filter="url(#glow)">
+    <rect x="300" y="80" width="60" height="40" fill="none" stroke="#0D6EFD" stroke-width="1" rx="4"/>
+    <polyline points="310,110 320,95 330,100 340,85 350,90" fill="none" stroke="#0D6EFD" stroke-width="2"/>
+    <rect x="310" y="105" width="4" height="10" fill="#0D6EFD" opacity="0.6"/>
+    <rect x="320" y="100" width="4" height="15" fill="#0D6EFD" opacity="0.6"/>
+    <rect x="330" y="95" width="4" height="20" fill="#0D6EFD" opacity="0.6"/>
+    <rect x="340" y="90" width="4" height="25" fill="#0D6EFD" opacity="0.6"/>
+  </g>
+  
+  <!-- Code Snippet Window (Top Left) -->
+  <g opacity="0.6" filter="url(#glow)">
+    <rect x="60" y="90" width="70" height="50" fill="none" stroke="#0D6EFD" stroke-width="1" rx="4"/>
+    <rect x="65" y="95" width="60" height="8" fill="#0A2540" opacity="0.8"/>
+    <circle cx="70" cy="99" r="1.5" fill="#ff6b6b"/>
+    <circle cx="75" cy="99" r="1.5" fill="#ffd93d"/>
+    <circle cx="80" cy="99" r="1.5" fill="#6bcf7f"/>
+    <rect x="70" y="108" width="30" height="2" fill="#0D6EFD" opacity="0.7"/>
+    <rect x="75" y="113" width="25" height="2" fill="#0D6EFD" opacity="0.5"/>
+    <rect x="70" y="118" width="35" height="2" fill="#0D6EFD" opacity="0.7"/>
+    <rect x="80" y="123" width="20" height="2" fill="#0D6EFD" opacity="0.5"/>
+    <rect x="70" y="128" width="28" height="2" fill="#0D6EFD" opacity="0.7"/>
+  </g>
+  
+  <!-- Connection Nodes (Center) -->
+  <g opacity="0.5" filter="url(#glow)">
+    <circle cx="200" cy="100" r="4" fill="#0D6EFD"/>
+    <circle cx="220" cy="85" r="3" fill="#0D6EFD"/>
+    <circle cx="180" cy="90" r="3" fill="#0D6EFD"/>
+    <circle cx="210" cy="110" r="2" fill="#0D6EFD"/>
+    <line x1="200" y1="100" x2="220" y2="85" stroke="#0D6EFD" stroke-width="1" opacity="0.6"/>
+    <line x1="200" y1="100" x2="180" y2="90" stroke="#0D6EFD" stroke-width="1" opacity="0.6"/>
+    <line x1="200" y1="100" x2="210" y2="110" stroke="#0D6EFD" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Abstract Data Flow Lines -->
+  <g opacity="0.4">
+    <path d="M100 120 Q150 100 200 120 T300 110" fill="none" stroke="#0D6EFD" stroke-width="1" stroke-dasharray="3,3"/>
+    <path d="M80 140 Q140 160 200 140 T320 130" fill="none" stroke="#0D6EFD" stroke-width="1" stroke-dasharray="2,4"/>
+  </g>
+  
+  <!-- Floating Particles for Tech Feel -->
+  <g opacity="0.3">
+    <circle cx="90" cy="70" r="1" fill="#0D6EFD"/>
+    <circle cx="320" cy="60" r="1.5" fill="#0D6EFD"/>
+    <circle cx="370" cy="100" r="1" fill="#0D6EFD"/>
+    <circle cx="40" cy="130" r="1" fill="#0D6EFD"/>
+    <circle cx="290" cy="190" r="1.5" fill="#0D6EFD"/>
+  </g>
+  
+</svg>

@@ -9,22 +9,32 @@
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/components/navbar.css">
     <link rel="stylesheet" href="/assets/css/components/footer.css">
+    <link rel="stylesheet" href="/assets/css/components/hero.css">
 </head>
 <body>
     <div id="site-header"></div>
     
-    <section class="py-5 mt-5 bg-gradient text-white">
+    <!-- FLUSH HERO SECTION -->
+    <section class="hero-flush">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold mb-4">Retail & E-commerce Solutions</h1>
-                    <p class="lead mb-4">Complete e-commerce platforms, inventory management systems, and omnichannel retail solutions.</p>
-                    <a href="/pages/contact.html" class="btn btn-light btn-lg">Build Your Store</a>
+                <!-- Left Column: Content -->
+                <div class="col-lg-6 text-white text-center text-lg-start">
+                    <h1 class="display-3 fw-bold hero-headline">Retail & E-commerce Solutions</h1>
+                    <p class="lead my-4 hero-description">Complete e-commerce platforms, inventory management systems, and omnichannel retail solutions that drive sales and customer loyalty.</p>
+                    <a href="/pages/contact.html" class="btn btn-light btn-lg rounded-pill px-4 fw-bold">Build Your Store</a>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <i class="bi bi-shop display-1 text-white opacity-75"></i>
+                <!-- Right Column: Visual -->
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform" class="img-fluid hero-visual">
                 </div>
             </div>
+        </div>
+        <!-- Shape Divider at the bottom -->
+        <div class="hero-shape-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 120 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
         </div>
     </section>
 
