@@ -1,0 +1,73 @@
+# ==========================
+# Frontend Node / NPM
+# ==========================
+frontend/node_modules/
+frontend/npm-debug.log*
+frontend/yarn-error.log
+frontend/package-lock.json
+frontend/yarn.lock
+
+# ==========================
+# Backend Node / NPM
+# ==========================
+backend/node_modules/
+backend/npm-debug.log*
+backend/yarn-error.log
+backend/package-lock.json
+backend/yarn.lock
+
+# ==========================
+# Build / Dist / Output
+# ==========================
+frontend/dist/
+frontend/build/
+backend/dist/
+backend/build/
+*.bundle.js
+*.min.js
+*.min.css
+*.map
+
+# ==========================
+# System / OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================
+# IDE / Editor
+# ==========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================
+# Environment / Config
+# ==========================
+.env
+.env.local
+.env.*.local
+
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/
+*.tmp
+
+# ==========================
+# Optional: Vendor (if using local copies)
+# ==========================
+# Uncomment if you do NOT want to commit local vendor files
+# vendor/bootstrap/
+# vendor/jquery/
+# vendor/fontawesome/
+
+# ==========================
+# Optional: Frontend assets
+# ==========================
+# Ignore minified CSS/JS if generated automatically
+# frontend/assets/css/*.min.css
+# frontend/assets/js/*.min.js
