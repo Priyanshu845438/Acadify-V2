@@ -3,7 +3,7 @@
 /* Base styles for mobile (<576px) */
 .footer-dark {
   margin-top: auto;
-  background: linear-gradient(135deg, #1a1a1a, #2d2d2d) !important;
+  background: linear-gradient(135deg, #000000) !important;
   color: white;
   padding: 3rem 0 2rem;
 }

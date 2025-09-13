@@ -1,205 +1,191 @@
-/* Testimonial CTA Component Styles - Mobile First */
+/* Testimonial CTA Component Styles - Improved Overlapping Design */
 
-/* Base styles for mobile (<576px) */
 .testimonial-cta-section {
-  padding: 3rem 0;
-  position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Prevents horizontal scroll */
+  padding: 4rem 0;
 }
 
-.testimonial-cta-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Testimonial content */
-.testimonial-content {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.testimonial-content h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.testimonial-content .lead {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  line-height: 1.5;
-  margin-bottom: 2rem;
-}
-
-/* Testimonial card mobile styles */
-.testimonial-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  border: none;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.testimonial-avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-  overflow: hidden;
-  border: 3px solid var(--bs-primary);
-}
-
-.testimonial-avatar img {
-  width: 100%;
+/* The dark blue panel on the right */
+.cta-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%; /* Adjust the split point */
   height: 100%;
-  object-fit: cover;
+  background-color: #0d3166; /* A professional navy blue */
+  z-index: 1;
 }
 
-.testimonial-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  font-style: italic;
+/* Overlapping card styling */
+.testimonial-cta-section .card {
+  background: white;
+  border: none;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  z-index: 3;
+  position: relative;
 }
 
-.testimonial-author {
-  font-weight: 600;
-  color: var(--bs-dark);
-  margin-bottom: 0.25rem;
-}
-
-.testimonial-role {
-  font-size: 0.875rem;
-  color: var(--bs-primary);
-}
-
-/* CTA section */
-.cta-content {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.cta-content h3 {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.cta-content p {
-  margin-bottom: 1.5rem;
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
-}
-
-/* Button styling */
-.cta-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+/* Carousel controls styling */
+.carousel-controls .btn {
+  width: 40px;
+  height: 40px;
+  border-width: 2px;
+  display: inline-flex;
   align-items: center;
-}
-
-.cta-buttons .btn {
-  min-height: 44px;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 2rem;
-  white-space: nowrap;
-  width: 100%;
-  max-width: 280px;
-}
-
-/* Rating stars */
-.rating-stars {
-  display: flex;
   justify-content: center;
-  gap: 0.25rem;
-  margin: 1rem 0;
 }
 
-.rating-stars i {
-  color: #ffc107;
-  font-size: 1.25rem;
+.carousel-controls .btn:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #0d2649;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+/* CTA section styling */
+.testimonial-cta-section .col-lg-5 {
+  z-index: 2;
+  position: relative;
+  color: white !important;
+}
+
+.testimonial-cta-section .col-lg-5 * {
+  color: white !important;
+}
+
+.testimonial-cta-section .col-lg-5 h1 {
+  color: white !important;
+}
+
+.testimonial-cta-section .col-lg-5 p {
+  color: white !important;
+}
+
+/* Testimonial content inside the card */
+.testimonial-cta-section .carousel-item {
+  padding: 0;
+}
+
+.testimonial-cta-section .display-4 {
+  margin-bottom: 1rem;
+}
+
+.testimonial-cta-section h2 {
+  color: var(--bs-dark);
+  font-size: 1.75rem;
+}
+
+.testimonial-cta-section .lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Avatar styling */
+.testimonial-cta-section .rounded-circle {
+  object-fit: cover;
+  border: 3px solid var(--bs-light);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* --- MOBILE RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 991.98px) {
+  /* On mobile, we stack instead of overlap */
+  .cta-panel {
+    position: relative; /* Change from absolute to relative */
+    width: 100%;
+    height: auto;
+    padding: 4rem 1rem; /* Give it its own space */
+    margin-top: 2rem; /* Add some separation */
+  }
+
+  .testimonial-cta-section .card {
+    margin-bottom: 2rem; /* Add space between the card and the CTA panel */
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15) !important; /* Keep a nice shadow */
+  }
+  
+  .testimonial-cta-section .col-lg-5 {
+    padding-left: 1rem !important; /* Reset desktop padding */
+  }
+
   .testimonial-cta-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
-  .testimonial-card {
-    padding: 2rem;
+  /* Center content on mobile */
+  .testimonial-cta-section .text-center {
+    text-align: center !important;
   }
 
-  .testimonial-avatar {
-    width: 72px;
-    height: 72px;
+  /* Adjust card padding on mobile */
+  .testimonial-cta-section .card {
+    padding: 1.5rem !important;
   }
 
-  .cta-buttons {
-    flex-direction: row;
-    justify-content: center;
+  .testimonial-cta-section .card .p-4 {
+    padding: 1.5rem !important;
   }
 
-  .cta-buttons .btn {
-    width: auto;
-    min-width: 180px;
+  .testimonial-cta-section .card .p-lg-5 {
+    padding: 1.5rem !important;
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 767.98px) {
   .testimonial-cta-section {
-    padding: 5rem 0;
+    padding: 2rem 0;
   }
 
-  /* Two column layout on larger screens */
-  .testimonial-cta-row {
-    align-items: center;
+  .testimonial-cta-section h2 {
+    font-size: 1.5rem;
   }
 
-  .testimonial-content {
-    text-align: left;
-    margin-bottom: 0;
+  .testimonial-cta-section .display-3 {
+    font-size: 2rem;
   }
 
-  .testimonial-card {
-    margin-bottom: 0;
+  .testimonial-cta-section .lead {
+    font-size: 1rem;
   }
 
-  .cta-content {
-    padding: 2.5rem;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .testimonial-cta-section {
-    padding: 6rem 0;
+  /* Stack buttons vertically on very small screens */
+  .testimonial-cta-section .btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
   }
 
-  .testimonial-avatar {
-    width: 80px;
-    height: 80px;
-  }
-
-  .testimonial-text {
-    font-size: 1.1rem;
+  .testimonial-cta-section .btn.me-2 {
+    margin-right: 0 !important;
   }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .testimonial-card {
-    padding: 2.5rem;
-  }
+/* Improved hover effects */
+.testimonial-cta-section .btn-light:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: white;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
 
-  .cta-content {
-    padding: 3rem;
+.testimonial-cta-section .btn-outline-light:hover {
+  background-color: white;
+  color: var(--bs-primary);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Animation for the overlapping card */
+.testimonial-cta-section .card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

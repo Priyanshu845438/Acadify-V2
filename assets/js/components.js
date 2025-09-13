@@ -11,6 +11,8 @@ class ComponentLoader {
                 const element = document.querySelector(selector);
                 if (element) {
                     element.innerHTML = this.loadedComponents.get(componentPath);
+                    // Re-initialize Bootstrap components after loading
+                    this.initializeBootstrapComponents(element);
                 }
                 return;
             }
@@ -26,10 +28,36 @@ class ComponentLoader {
             const element = document.querySelector(selector);
             if (element) {
                 element.innerHTML = html;
+                // Initialize Bootstrap components after loading
+                this.initializeBootstrapComponents(element);
             }
         } catch (error) {
             console.error('Error loading component:', error);
         }
+    }
+
+    initializeBootstrapComponents(element) {
+        // Initialize dropdowns
+        const dropdownTriggers = element.querySelectorAll('[data-bs-toggle="dropdown"]');
+        dropdownTriggers.forEach(trigger => {
+            if (!trigger._bootstrap_dropdown_initialized) {
+                new bootstrap.Dropdown(trigger);
+                trigger._bootstrap_dropdown_initialized = true;
+            }
+        });
+
+        // Initialize navbar collapse
+        const collapseTriggers = element.querySelectorAll('[data-bs-toggle="collapse"]');
+        collapseTriggers.forEach(trigger => {
+            if (!trigger._bootstrap_collapse_initialized) {
+                const targetId = trigger.getAttribute('data-bs-target');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    new bootstrap.Collapse(target, { toggle: false });
+                    trigger._bootstrap_collapse_initialized = true;
+                }
+            }
+        });
     }
 
     async loadServiceCard(selector, icon, title, description, link = '#') {

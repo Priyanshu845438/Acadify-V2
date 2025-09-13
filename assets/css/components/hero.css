@@ -1,7 +1,7 @@
 /* Advanced Hero Section Component Styles */
 
 .hero-section {
-  background: linear-gradient(135deg, #0D2240, #0D6EFD);
+  background: linear-gradient(135deg, #0D2240, #0d3269);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   overflow: hidden;

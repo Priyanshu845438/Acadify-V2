@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Professional mobile app development services - native iOS, Android, and cross-platform solutions">
+    <meta name="description" content="Professional mobile app development services - native iOS, Android, and cross-platform solutions that captivate users and achieve business goals">
     <meta name="author" content="Ideovent Technologies">
     
     <title>App Development Services - Ideovent Technologies</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -17,168 +20,213 @@
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/components/navbar.css">
     <link rel="stylesheet" href="/assets/css/components/feature-card.css">
+    <link rel="stylesheet" href="/assets/css/components/case-studies.css">
     <link rel="stylesheet" href="/assets/css/components/footer.css">
+    <link rel="stylesheet" href="/assets/css/components/testimonial-cta.css">
+
 </head>
 <body>
     <!-- Navigation -->
     <div id="site-header"></div>
     
-    <!-- Hero Section -->
-    <section class="py-5 mt-5 bg-gradient text-white">
+    <!-- Hero Header Component -->
+    <section class="py-5 mt-5" style="background-color: #F8F9FA;">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">App Development Services</h1>
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Bringing Your App Ideas to Life with High-Performance Mobile Development
+                    </h1>
                     <p class="lead mb-4">
-                        Transform your ideas into powerful mobile applications. We create native iOS and Android apps, as well as cross-platform solutions that deliver exceptional user experiences.
+                        We design and develop beautiful, intuitive, and scalable mobile applications for iOS and Android that captivate users and achieve business goals.
                     </p>
-                    <a href="/pages/contact.html" class="btn btn-light btn-lg">Start Your App Project</a>
+                    <a href="#contact-form" class="btn btn-primary btn-lg rounded-pill px-4">
+                        <i class="bi bi-chat-dots me-2"></i>Get a Free App Consultation
+                    </a>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <i class="bi bi-phone display-1 text-white opacity-75"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-6 fw-bold mb-4">Our App Development Expertise</h2>
-                <p class="lead text-muted">Comprehensive mobile solutions from concept to deployment</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-apple display-3 text-primary mb-3"></i>
-                            <h5 class="fw-bold">iOS Development</h5>
-                            <p class="card-text">Native iOS apps using Swift and Objective-C, optimized for iPhone and iPad with App Store guidelines compliance.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-android2 display-3 text-success mb-3"></i>
-                            <h5 class="fw-bold">Android Development</h5>
-                            <p class="card-text">Native Android apps using Java and Kotlin, designed for various screen sizes and Android versions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-phone-flip display-3 text-warning mb-3"></i>
-                            <h5 class="fw-bold">Cross-Platform</h5>
-                            <p class="card-text">React Native and Flutter apps that run on both iOS and Android with shared codebase and native performance.</p>
-                        </div>
+                    <div class="position-relative">
+                        <!-- Smartphone Mockup with App UI -->
+                        <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Modern smartphone showcasing beautiful app interface" 
+                             class="img-fluid rounded-3 shadow-lg" 
+                             style="max-width: 400px; height: auto;"
+                             loading="lazy"
+                             width="1000" 
+                             height="1500">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Development Process -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-6 fw-bold mb-4">Our Development Process</h2>
-                <p class="lead text-muted">Structured approach ensuring quality and timely delivery</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="text-center">
-                        <div class="bg-primary text-white rounded-circle mx-auto mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                            <span class="fw-bold">1</span>
-                        </div>
-                        <h6 class="fw-bold">Discovery & Planning</h6>
-                        <p class="small text-muted">Understanding requirements, target audience, and project scope</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="text-center">
-                        <div class="bg-primary text-white rounded-circle mx-auto mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                            <span class="fw-bold">2</span>
-                        </div>
-                        <h6 class="fw-bold">Design & Prototype</h6>
-                        <p class="small text-muted">UI/UX design, wireframes, and interactive prototypes</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="text-center">
-                        <div class="bg-primary text-white rounded-circle mx-auto mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                            <span class="fw-bold">3</span>
-                        </div>
-                        <h6 class="fw-bold">Development & Testing</h6>
-                        <p class="small text-muted">Agile development with continuous testing and quality assurance</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="text-center">
-                        <div class="bg-primary text-white rounded-circle mx-auto mb-3" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
-                            <span class="fw-bold">4</span>
-                        </div>
-                        <h6 class="fw-bold">Launch & Support</h6>
-                        <p class="small text-muted">App store submission, marketing support, and ongoing maintenance</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Features -->
+    <!-- Introduction Component: Why Mobile Apps Matter -->
     <section class="py-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="display-6 fw-bold mb-4">Why Choose Our App Development?</h2>
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <i class="bi bi-speedometer2 text-primary fs-3 me-3"></i>
-                                <div>
-                                    <h6 class="fw-bold">Performance Optimized</h6>
-                                    <p class="text-muted mb-0">Fast loading times, smooth animations, and efficient memory usage</p>
-                                </div>
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="display-6 fw-bold mb-4">Your Bridge to a Mobile-First World</h2>
+                    <p class="lead mb-4">
+                        In India's rapidly growing digital landscape, mobile apps are essential for business success. With over 750 million smartphone users, your customers expect seamless mobile experiences that provide instant access to your services.
+                    </p>
+                    <p class="mb-4">
+                        Our mobile app development expertise helps businesses capture this massive opportunity by creating apps that not only look stunning but drive real engagement, increase customer retention, and generate measurable business results.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span class="fw-medium">Increased user engagement</span>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <i class="bi bi-shield-check text-primary fs-3 me-3"></i>
-                                <div>
-                                    <h6 class="fw-bold">Security First</h6>
-                                    <p class="text-muted mb-0">Data encryption, secure authentication, and privacy compliance</p>
-                                </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span class="fw-medium">24/7 accessibility</span>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <i class="bi bi-arrows-fullscreen text-primary fs-3 me-3"></i>
-                                <div>
-                                    <h6 class="fw-bold">Scalable Architecture</h6>
-                                    <p class="text-muted mb-0">Built to handle growth with modular and maintainable code</p>
-                                </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span class="fw-medium">Enhanced customer loyalty</span>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <i class="bi bi-people text-primary fs-3 me-3"></i>
-                                <div>
-                                    <h6 class="fw-bold">User-Centric Design</h6>
-                                    <p class="text-muted mb-0">Intuitive interfaces that provide exceptional user experiences</p>
-                                </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span class="fw-medium">Direct marketing channel</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="text-center">
-                        <div class="bg-primary bg-gradient rounded-3 p-5 text-white">
-                            <i class="bi bi-rocket display-1 mb-3"></i>
-                            <h3>Launch Ready</h3>
-                            <p class="mb-0">From idea to app store in 8-12 weeks with our proven development process</p>
+                <div class="col-lg-6 text-center">
+                    <!-- Mobile connectivity illustration -->
+                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Mobile connectivity and user engagement illustration" 
+                         class="img-fluid rounded-3"
+                         loading="lazy"
+                         width="1000" 
+                         height="667">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our App Development Services Component (Bootstrap Tabs) -->
+    <section class="py-5" style="background-color: #F8F9FA;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold mb-4">Comprehensive App Solutions</h2>
+                <p class="lead text-muted">Expert development across all major mobile platforms</p>
+            </div>
+            
+            <!-- Bootstrap Tab Navigation -->
+            <ul class="nav nav-pills nav-fill mb-5" id="appServicesTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-medium" id="ios-tab" data-bs-toggle="pill" data-bs-target="#ios" type="button" role="tab" aria-controls="ios" aria-selected="true">
+                        <i class="bi bi-apple me-2"></i>Native iOS Development
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-medium" id="android-tab" data-bs-toggle="pill" data-bs-target="#android" type="button" role="tab" aria-controls="android" aria-selected="false">
+                        <i class="bi bi-android2 me-2"></i>Native Android Development
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-medium" id="hybrid-tab" data-bs-toggle="pill" data-bs-target="#hybrid" type="button" role="tab" aria-controls="hybrid" aria-selected="false">
+                        <i class="bi bi-code-slash me-2"></i>Hybrid & Cross-Platform
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="appServicesTabsContent">
+                <!-- iOS Development Tab -->
+                <div class="tab-pane fade show active" id="ios" role="tabpanel" aria-labelledby="ios-tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="text-center mb-4 mb-lg-0">
+                                <i class="bi bi-apple display-1 text-primary mb-3"></i>
+                                <h4 class="fw-bold">Native iOS Development</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="lead mb-4">
+                                Build powerful, performance-optimized iOS apps that leverage Apple's ecosystem to deliver exceptional user experiences.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Maximum performance and security</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Full access to iOS features and APIs</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Seamless App Store approval process</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Apple design guidelines compliance</li>
+                            </ul>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-light text-dark border">Swift</span>
+                                <span class="badge bg-light text-dark border">Xcode</span>
+                                <span class="badge bg-light text-dark border">UIKit</span>
+                                <span class="badge bg-light text-dark border">SwiftUI</span>
+                                <span class="badge bg-light text-dark border">Core Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Android Development Tab -->
+                <div class="tab-pane fade" id="android" role="tabpanel" aria-labelledby="android-tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="text-center mb-4 mb-lg-0">
+                                <i class="bi bi-android2 display-1 text-success mb-3"></i>
+                                <h4 class="fw-bold">Native Android Development</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="lead mb-4">
+                                Create robust Android applications that work seamlessly across the diverse Android ecosystem and reach billions of users.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Broad market reach and accessibility</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Extensive customization options</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Multi-device compatibility</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Open-source ecosystem benefits</li>
+                            </ul>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-light text-dark border">Kotlin</span>
+                                <span class="badge bg-light text-dark border">Android Studio</span>
+                                <span class="badge bg-light text-dark border">Jetpack Compose</span>
+                                <span class="badge bg-light text-dark border">Room Database</span>
+                                <span class="badge bg-light text-dark border">Material Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hybrid Development Tab -->
+                <div class="tab-pane fade" id="hybrid" role="tabpanel" aria-labelledby="hybrid-tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="text-center mb-4 mb-lg-0">
+                                <i class="bi bi-code-slash display-1 text-warning mb-3"></i>
+                                <h4 class="fw-bold">Hybrid & Cross-Platform</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="lead mb-4">
+                                Develop once, deploy everywhere. Our cross-platform solutions deliver native-like performance with cost-effective development.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Single codebase for multiple platforms</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Faster time-to-market</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Cost-effective development</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Near-native performance</li>
+                            </ul>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-light text-dark border">React Native</span>
+                                <span class="badge bg-light text-dark border">Flutter</span>
+                                <span class="badge bg-light text-dark border">Ionic</span>
+                                <span class="badge bg-light text-dark border">Xamarin</span>
+                                <span class="badge bg-light text-dark border">Progressive Web Apps</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,31 +234,71 @@
         </div>
     </section>
 
-    <!-- Technologies -->
-    <section class="py-5 bg-light">
+    <!-- Technology Stack Component -->
+    <section class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-6 fw-bold mb-4">Technologies We Use</h2>
-                <p class="lead text-muted">Modern tools and frameworks for cutting-edge mobile solutions</p>
+                <h2 class="display-6 fw-bold mb-4">The Tools We Use to Build Excellence</h2>
+                <p class="lead text-muted">Modern technologies and frameworks for cutting-edge mobile solutions</p>
             </div>
+            
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="row g-4">
-                        <div class="col-md-6 col-lg-3 text-center">
-                            <h6 class="fw-bold text-primary">iOS Development</h6>
-                            <p class="small">Swift, Objective-C, Xcode, Core Data, UIKit, SwiftUI</p>
+                        <!-- iOS Technologies -->
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="bi bi-apple display-6 text-primary mb-3"></i>
+                                <h6 class="fw-bold">iOS Development</h6>
+                                <div class="small text-muted">
+                                    <div class="mb-1">Swift & Objective-C</div>
+                                    <div class="mb-1">Xcode IDE</div>
+                                    <div class="mb-1">UIKit & SwiftUI</div>
+                                    <div>Core Data & CloudKit</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-lg-3 text-center">
-                            <h6 class="fw-bold text-success">Android Development</h6>
-                            <p class="small">Java, Kotlin, Android Studio, Room, Jetpack Compose</p>
+                        
+                        <!-- Android Technologies -->
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="bi bi-android2 display-6 text-success mb-3"></i>
+                                <h6 class="fw-bold">Android Development</h6>
+                                <div class="small text-muted">
+                                    <div class="mb-1">Kotlin & Java</div>
+                                    <div class="mb-1">Android Studio</div>
+                                    <div class="mb-1">Jetpack Compose</div>
+                                    <div>Room & SQLite</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-lg-3 text-center">
-                            <h6 class="fw-bold text-warning">Cross-Platform</h6>
-                            <p class="small">React Native, Flutter, Xamarin, Ionic</p>
+                        
+                        <!-- Cross-Platform Technologies -->
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="bi bi-code-slash display-6 text-warning mb-3"></i>
+                                <h6 class="fw-bold">Cross-Platform</h6>
+                                <div class="small text-muted">
+                                    <div class="mb-1">React Native</div>
+                                    <div class="mb-1">Flutter & Dart</div>
+                                    <div class="mb-1">Ionic Framework</div>
+                                    <div>Progressive Web Apps</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-lg-3 text-center">
-                            <h6 class="fw-bold text-info">Backend Services</h6>
-                            <p class="small">Firebase, AWS, Node.js, REST APIs, GraphQL</p>
+                        
+                        <!-- Backend & Cloud -->
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                                <i class="bi bi-cloud-upload display-6 text-info mb-3"></i>
+                                <h6 class="fw-bold">Backend & Cloud</h6>
+                                <div class="small text-muted">
+                                    <div class="mb-1">Firebase & AWS</div>
+                                    <div class="mb-1">Node.js & Express</div>
+                                    <div class="mb-1">REST & GraphQL APIs</div>
+                                    <div>MongoDB & PostgreSQL</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -218,19 +306,558 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-5 bg-primary text-white">
-        <div class="container text-center">
-            <h2 class="display-6 fw-bold mb-4">Ready to Build Your Mobile App?</h2>
-            <p class="lead mb-4">Let's discuss your app idea and create something amazing together.</p>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <a href="/pages/contact.html" class="btn btn-light btn-lg me-3">Get Started</a>
-                    <a href="/pages/insights/portfolio.html" class="btn btn-outline-light btn-lg">View Our Apps</a>
+    <!-- Development Process Component (Visual Timeline) -->
+    <section class="py-5" style="background-color: #F8F9FA;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold mb-4">From Concept to Launch: Our Agile Process</h2>
+                <p class="lead text-muted">A proven methodology that ensures quality delivery and client satisfaction</p>
+            </div>
+            
+            <!-- Timeline for Desktop -->
+            <div class="d-none d-md-block">
+                <div class="row position-relative">
+                    <!-- Timeline Line -->
+                    <div class="position-absolute top-50 start-0 w-100" style="height: 2px; background-color: #dee2e6; z-index: 1;"></div>
+                    
+                    <!-- Step 1: Discovery & Strategy -->
+                    <div class="col-md text-center position-relative" style="z-index: 2;">
+                        <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="bi bi-lightbulb fs-4"></i>
+                        </div>
+                        <div class="bg-white rounded-3 p-3 shadow-sm">
+                            <h6 class="fw-bold text-primary mb-2">Discovery & Strategy</h6>
+                            <p class="small text-muted mb-0">Understanding your goals, target audience, and project requirements</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: UI/UX Design -->
+                    <div class="col-md text-center position-relative" style="z-index: 2;">
+                        <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="bi bi-palette fs-4"></i>
+                        </div>
+                        <div class="bg-white rounded-3 p-3 shadow-sm">
+                            <h6 class="fw-bold text-primary mb-2">UI/UX Design</h6>
+                            <p class="small text-muted mb-0">Creating wireframes, prototypes, and beautiful user interfaces</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Development -->
+                    <div class="col-md text-center position-relative" style="z-index: 2;">
+                        <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="bi bi-code-square fs-4"></i>
+                        </div>
+                        <div class="bg-white rounded-3 p-3 shadow-sm">
+                            <h6 class="fw-bold text-primary mb-2">Development</h6>
+                            <p class="small text-muted mb-0">Writing clean, efficient, and scalable code with best practices</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: QA & Testing -->
+                    <div class="col-md text-center position-relative" style="z-index: 2;">
+                        <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="bi bi-bug fs-4"></i>
+                        </div>
+                        <div class="bg-white rounded-3 p-3 shadow-sm">
+                            <h6 class="fw-bold text-primary mb-2">QA & Testing</h6>
+                            <p class="small text-muted mb-0">Rigorous testing to ensure a bug-free, smooth user experience</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5: Deployment & Support -->
+                    <div class="col-md text-center position-relative" style="z-index: 2;">
+                        <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="bi bi-rocket-takeoff fs-4"></i>
+                        </div>
+                        <div class="bg-white rounded-3 p-3 shadow-sm">
+                            <h6 class="fw-bold text-primary mb-2">Deployment & Support</h6>
+                            <p class="small text-muted mb-0">App store submission, launch support, and ongoing maintenance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline for Mobile (Vertical Stack) -->
+            <div class="d-md-none">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
+                                <i class="bi bi-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-primary mb-1">Discovery & Strategy</h6>
+                                <p class="small text-muted mb-0">Understanding your goals and requirements</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
+                                <i class="bi bi-palette"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-primary mb-1">UI/UX Design</h6>
+                                <p class="small text-muted mb-0">Creating wireframes and beautiful interfaces</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
+                                <i class="bi bi-code-square"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-primary mb-1">Development</h6>
+                                <p class="small text-muted mb-0">Writing clean, efficient code</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
+                                <i class="bi bi-bug"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-primary mb-1">QA & Testing</h6>
+                                <p class="small text-muted mb-0">Ensuring bug-free experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
+                                <i class="bi bi-rocket-takeoff"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold text-primary mb-1">Deployment & Support</h6>
+                                <p class="small text-muted mb-0">Launch and ongoing maintenance</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Featured App Projects Component -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold mb-4">Our App Development Work in Action</h2>
+                <p class="lead text-muted">Real projects, real results - see how we've helped businesses succeed</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- E-commerce App Project -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="case-study-card text-decoration-none" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top" alt="E-commerce mobile app interface" 
+                                 style="height: 200px; object-fit: cover;"
+                                 loading="lazy"
+                                 width="800"
+                                 height="200">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <span class="badge bg-primary rounded-pill">E-commerce</span>
+                                    <small class="text-muted">iOS & Android</small>
+                                </div>
+                                <h5 class="card-title fw-bold">FreshMart Mobile App</h5>
+                                <p class="card-text text-muted">
+                                    Complete grocery shopping app with real-time inventory, payment integration, and delivery tracking.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-success fw-medium">
+                                        <i class="bi bi-arrow-up me-1"></i>300% order increase
+                                    </small>
+                                    <small class="text-primary">Click to view details</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Fitness App Project -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="case-study-card text-decoration-none" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top" alt="Fitness tracking app interface" 
+                                 style="height: 200px; object-fit: cover;"
+                                 loading="lazy"
+                                 width="800"
+                                 height="200">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <span class="badge bg-success rounded-pill">Health & Fitness</span>
+                                    <small class="text-muted">React Native</small>
+                                </div>
+                                <h5 class="card-title fw-bold">FitTracker Pro</h5>
+                                <p class="card-text text-muted">
+                                    Comprehensive fitness tracking app with workout plans, nutrition logging, and social features.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-success fw-medium">
+                                        <i class="bi bi-arrow-up me-1"></i>50K+ downloads
+                                    </small>
+                                    <small class="text-primary">Click to view details</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- FinTech App Project -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="case-study-card text-decoration-none" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top" alt="FinTech mobile app dashboard" 
+                                 style="height: 200px; object-fit: cover;"
+                                 loading="lazy"
+                                 width="800"
+                                 height="200">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <span class="badge bg-info rounded-pill">FinTech</span>
+                                    <small class="text-muted">Flutter</small>
+                                </div>
+                                <h5 class="card-title fw-bold">PayEase Wallet</h5>
+                                <p class="card-text text-muted">
+                                    Secure digital wallet with UPI integration, bill payments, and advanced security features.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-success fw-medium">
+                                        <i class="bi bi-arrow-up me-1"></i>1M+ transactions
+                                    </small>
+                                    <small class="text-primary">Click to view details</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Component (Bootstrap Accordion) -->
+    <section class="py-5" style="background-color: #F8F9FA;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold mb-4">Your App Development Questions, Answered</h2>
+                <p class="lead text-muted">Common questions from our clients - get the information you need</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="appFAQAccordion">
+                        <!-- FAQ 1: Cost -->
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                    How much does it cost to build a mobile app?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#appFAQAccordion">
+                                <div class="accordion-body">
+                                    <p>App development costs vary based on complexity, features, and platform choice:</p>
+                                    <ul>
+                                        <li><strong>Simple Apps (MVP):</strong> ₹3-8 lakhs - Basic functionality with 3-5 screens</li>
+                                        <li><strong>Medium Complexity:</strong> ₹8-20 lakhs - Custom UI, API integration, user accounts</li>
+                                        <li><strong>Complex Apps:</strong> ₹20+ lakhs - Advanced features, real-time data, payment systems</li>
+                                    </ul>
+                                    <p>We provide detailed project estimates after understanding your specific requirements during our free consultation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2: Timeline -->
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                    What is the typical timeline for app development?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#appFAQAccordion">
+                                <div class="accordion-body">
+                                    <p>Development timelines depend on app complexity and features:</p>
+                                    <ul>
+                                        <li><strong>Simple Apps:</strong> 8-12 weeks - Basic functionality and design</li>
+                                        <li><strong>Medium Apps:</strong> 12-20 weeks - Custom features and integrations</li>
+                                        <li><strong>Complex Apps:</strong> 20+ weeks - Advanced functionality and testing</li>
+                                    </ul>
+                                    <p>Our agile development process includes regular updates and milestone reviews to keep your project on track. We also factor in app store review times (1-7 days for iOS, 1-3 days for Android).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3: Support -->
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                    Do you provide support after the app is launched?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#appFAQAccordion">
+                                <div class="accordion-body">
+                                    <p>Yes! We provide comprehensive post-launch support:</p>
+                                    <ul>
+                                        <li><strong>Free Support:</strong> 3 months of bug fixes and minor updates</li>
+                                        <li><strong>Maintenance Plans:</strong> Ongoing updates, security patches, and OS compatibility</li>
+                                        <li><strong>Feature Updates:</strong> New functionality and improvements as your business grows</li>
+                                        <li><strong>Performance Monitoring:</strong> Analytics, crash reporting, and optimization</li>
+                                    </ul>
+                                    <p>Our team remains your technology partner, helping your app evolve with your business needs and market changes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4: Platforms -->
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                    Should I choose native or cross-platform development?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#appFAQAccordion">
+                                <div class="accordion-body">
+                                    <p>The choice depends on your specific needs:</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="fw-bold text-primary">Choose Native When:</h6>
+                                            <ul class="small">
+                                                <li>Maximum performance is critical</li>
+                                                <li>Heavy use of device features</li>
+                                                <li>Platform-specific design is important</li>
+                                                <li>Complex animations and graphics</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6 class="fw-bold text-success">Choose Cross-Platform When:</h6>
+                                            <ul class="small">
+                                                <li>Budget and timeline are priorities</li>
+                                                <li>Targeting both iOS and Android</li>
+                                                <li>Standard app functionality</li>
+                                                <li>Faster market entry needed</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p class="mt-3">We'll help you make the right choice during our consultation based on your goals and requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combined Testimonial & CTA Section -->
+    <div id="testimonial-cta-section"></div>
+
+    <!-- Project Modals -->
+    <!-- Modal 1: E-commerce App -->
+    <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="projectModal1Label">FreshMart Mobile App</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         class="img-fluid rounded mb-4" alt="FreshMart App Screenshots"
+                         loading="lazy"
+                         width="1200"
+                         height="800">
+                    
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h6 class="fw-bold text-primary mb-3">Project Challenge</h6>
+                            <p>FreshMart needed a comprehensive mobile app to compete with major grocery delivery platforms. They required real-time inventory management, seamless payment processing, and efficient delivery tracking.</p>
+                            
+                            <h6 class="fw-bold text-primary mb-3">Our Solution</h6>
+                            <ul>
+                                <li>Native iOS and Android apps with intuitive UI/UX</li>
+                                <li>Real-time inventory integration with POS systems</li>
+                                <li>Multiple payment gateways with UPI integration</li>
+                                <li>GPS-based delivery tracking and notifications</li>
+                                <li>Admin dashboard for order and inventory management</li>
+                            </ul>
+                            
+                            <h6 class="fw-bold text-success mb-3">Results Achieved</h6>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="h4 text-success mb-1">300%</div>
+                                        <small>Order Increase</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="h4 text-success mb-1">25K+</div>
+                                        <small>App Downloads</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="fw-bold mb-3">Technologies Used</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary">React Native</span>
+                                <span class="badge bg-secondary">Node.js</span>
+                                <span class="badge bg-info">MongoDB</span>
+                                <span class="badge bg-success">Stripe</span>
+                                <span class="badge bg-warning">Firebase</span>
+                            </div>
+                            
+                            <h6 class="fw-bold mt-4 mb-3">Timeline</h6>
+                            <p class="small">16 weeks from concept to app store launch</p>
+                            
+                            <h6 class="fw-bold mt-4 mb-3">Platform</h6>
+                            <p class="small">iOS, Android & Web Admin Panel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Fitness App -->
+    <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="projectModal2Label">FitTracker Pro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         class="img-fluid rounded mb-4" alt="FitTracker Pro App Screenshots"
+                         loading="lazy"
+                         width="1200"
+                         height="800">
+                    
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h6 class="fw-bold text-primary mb-3">Project Challenge</h6>
+                            <p>Create a comprehensive fitness tracking app that could compete with established players while offering unique social features and personalized workout plans.</p>
+                            
+                            <h6 class="fw-bold text-primary mb-3">Our Solution</h6>
+                            <ul>
+                                <li>Cross-platform React Native app for iOS and Android</li>
+                                <li>AI-powered personalized workout recommendations</li>
+                                <li>Social features for community building and challenges</li>
+                                <li>Wearable device integration (Apple Watch, Fitbit)</li>
+                                <li>Nutrition tracking with barcode scanning</li>
+                            </ul>
+                            
+                            <h6 class="fw-bold text-success mb-3">Results Achieved</h6>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="h4 text-success mb-1">50K+</div>
+                                        <small>Downloads</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="h4 text-success mb-1">4.8★</div>
+                                        <small>App Store Rating</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="fw-bold mb-3">Technologies Used</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary">React Native</span>
+                                <span class="badge bg-secondary">Express.js</span>
+                                <span class="badge bg-info">PostgreSQL</span>
+                                <span class="badge bg-success">HealthKit</span>
+                                <span class="badge bg-warning">Google Fit</span>
+                            </div>
+                            
+                            <h6 class="fw-bold mt-4 mb-3">Timeline</h6>
+                            <p class="small">20 weeks including beta testing</p>
+                            
+                            <h6 class="fw-bold mt-4 mb-3">Platform</h6>
+                            <p class="small">iOS, Android & Apple Watch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: FinTech App -->
+    <div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="projectModal3Label">PayEase Wallet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         class="img-fluid rounded mb-4" alt="PayEase Wallet App Screenshots"
+                         loading="lazy"
+                         width="1200"
+                         height="800">
+                    
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h6 class="fw-bold text-primary mb-3">Project Challenge</h6>
+                            <p>Develop a secure digital wallet app with UPI integration, meeting strict financial regulations while providing a seamless user experience for daily transactions.</p>
+                            
+                            <h6 class="fw-bold text-primary mb-3">Our Solution</h6>
+                            <ul>
+                                <li>Flutter app with bank-level security protocols</li>
+                                <li>UPI SDK integration for seamless payments</li>
+                                <li>Biometric authentication and PIN security</li>
+                                <li>Bill payment integration for utilities and services</li>
+                                <li>QR code scanning for merchant payments</li>
+                            </ul>
+                            
+                            <h6 class="fw-bold text-success mb-3">Results Achieved</h6>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="h4 text-success mb-1">1M+</div>
+                                        <small>Transactions</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <div class="h4 text-success mb-1">100K+</div>
+                                        <small>Active Users</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="fw-bold mb-3">Technologies Used</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary">Flutter</span>
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-info">PostgreSQL</span>
+                                <span class="badge bg-success">UPI SDK</span>
+                                <span class="badge bg-warning">AWS</span>
+                            </div>
+                            
+                            <h6 class="fw-bold mt-4 mb-3">Timeline</h6>
+                            <p class="small">24 weeks including security audits</p>
+                            
+                            <h6 class="fw-bold mt-4 mb-3">Platform</h6>
+                            <p class="small">iOS, Android & Web Portal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <div id="site-footer"></div>

@@ -7,8 +7,8 @@
 /* Color Palette Variables - Bootstrap 5.3+ Compliant */
 :root {
   /* Bootstrap Variable Overrides - The Right Way */
-  --bs-primary: #0D6EFD;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary: #0d3169;
+  --bs-primary-rgb: 13, 50, 105;
   --bs-light: #F8F9FA;
   --bs-dark: #212529;
   --bs-body-color: #495057;
@@ -177,7 +177,7 @@ section {
 
 /* Custom Background Classes - Don't override Bootstrap utilities */
 .hero-gradient {
-  background: linear-gradient(135deg, var(--primary-blue), #0B5ED7) !important;
+  background: linear-gradient(135deg, var(--primary-blue), #0d336b) !important;
 }
 
 /* Custom Text Utilities - Use Bootstrap variables only */
@@ -230,7 +230,7 @@ a:hover {
 
 /* Icon Styling */
 .bi {
-  color: var(--bs-primary);
+  color: white;
 }
 
 /* Display Utilities */
@@ -383,7 +383,7 @@ html {
 }
 
 #caseStudyTabs .nav-link.active {
-  color: #0D6EFD;
+  color: #0d3269;
   background: none;
   border: none;
 }
@@ -396,7 +396,7 @@ html {
   transform: translateX(-50%);
   width: 60%;
   height: 2px;
-  background-color: #0D6EFD;
+  background-color: #0d3269;
 }
 
 .results-list {
@@ -418,7 +418,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0D6EFD; /* The primary blue */
+  background-color: #0d3269; /* The primary blue */
   
   /* The magic for the diagonal cut */
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 40% 100%);
@@ -536,8 +536,8 @@ html {
 
 /* Latest Blogs Component Styling */
 .blog-card {
-  background-color: #FFFBEB !important; /* Creamy-beige background */
-  border: 1px solid #FDEEC9 !important; /* Slightly darker border */
+  background-color: #0d326966 !important; /* Creamy-beige background */
+  border: 1px solid #0d3269 !important; /* Slightly darker border */
   border-radius: 1rem !important; /* Softer, more pronounced rounded corners */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

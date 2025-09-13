@@ -1,74 +1,95 @@
-<!-- TESTIMONIAL & CTA SECTION (DIAGONAL DESIGN) -->
-<section class="testimonial-cta-section position-relative">
-    <div class="container position-relative" style="z-index: 2;">
+<!-- TESTIMONIAL & CTA SECTION (IMPROVED OVERLAPPING DESIGN) -->
+<section class="testimonial-cta-section position-relative bg-light">
+  <!-- Dark Blue Background Panel (Right Side) -->
+  <div class="cta-panel"></div>
+
+  <div class="container py-5 position-relative" style="z-index: 2;">
+    <div class="row align-items-center">
+
+      <!-- This single column will contain both the card and the CTA content -->
+      <div class="col-12">
         <div class="row align-items-center">
-
-            <!-- === Left Column: Testimonial Carousel === -->
-            <div class="col-lg-6 py-5">
-                <div id="testimonialSlider" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <!-- SLIDE 1 -->
-                        <div class="carousel-item active">
-                            <i class="bi bi-quote text-primary display-4"></i>
-                            <h2 class="fw-bold my-3">What Our Clients Say</h2>
-                            <p class="lead text-muted">"Outstanding web development service! They created a beautiful, responsive website that perfectly represents our brand. The SEO optimization work has doubled our organic traffic."</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" class="rounded-circle" alt="Michael Chen" style="width: 60px; height: 60px;">
-                                <div class="ms-3">
-                                    <h6 class="fw-bold mb-0">Michael Chen</h6>
-                                    <small class="text-muted">Founder at GrowthLab</small>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- SLIDE 2 -->
-                        <div class="carousel-item">
-                            <i class="bi bi-quote text-primary display-4"></i>
-                            <h2 class="fw-bold my-3">What Our Clients Say</h2>
-                            <p class="lead text-muted">"Ideovent Technologies transformed our entire digital presence. Their strategic approach and flawless execution helped us achieve a 250% increase in online conversions within just six months."</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" class="rounded-circle" alt="Rajesh Kumar" style="width: 60px; height: 60px;">
-                                <div class="ms-3">
-                                    <h6 class="fw-bold mb-0">Rajesh Kumar</h6>
-                                    <small class="text-muted">CEO at TechStart Solutions</small>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- SLIDE 3 -->
-                        <div class="carousel-item">
-                            <i class="bi bi-quote text-primary display-4"></i>
-                            <h2 class="fw-bold my-3">What Our Clients Say</h2>
-                            <p class="lead text-muted">"The team at Ideovent delivered beyond our expectations. Their innovative mobile app solution increased our customer engagement by 180% and streamlined our entire business process."</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80" class="rounded-circle" alt="Priya Sharma" style="width: 60px; height: 60px;">
-                                <div class="ms-3">
-                                    <h6 class="fw-bold mb-0">Priya Sharma</h6>
-                                    <small class="text-muted">Product Manager at InnovateCorp</small>
-                                </div>
-                            </div>
-                        </div>
+          
+          <!-- Left Part (within the card) -->
+          <div class="col-lg-7">
+            <!-- Overlapping Card -->
+            <div class="card shadow-lg border-0 rounded-4 p-4 p-lg-5">
+              <div id="testimonialCardSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <!-- SLIDE 1 -->
+                  <div class="carousel-item active">
+                    <i class="bi bi-quote text-primary display-4"></i>
+                    <h2 class="fw-bold my-3">What Our Clients Say</h2>
+                    <p class="lead text-muted">"Outstanding web development service! They created a beautiful, responsive website that perfectly represents our brand. The SEO optimization work has doubled our organic traffic."</p>
+                    <div class="d-flex align-items-center mt-4">
+                      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" class="rounded-circle" alt="Michael Chen" style="width: 60px; height: 60px;">
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-0">Michael Chen</h6>
+                        <small class="text-muted">Founder at GrowthLab</small>
+                      </div>
                     </div>
-                    <!-- Custom Carousel Controls -->
-                    <div class="carousel-controls mt-4">
-                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialSlider" data-bs-slide="prev">
-                            <i class="bi bi-arrow-left-circle fs-3 text-primary"></i>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialSlider" data-bs-slide="next">
-                            <i class="bi bi-arrow-right-circle fs-3 text-primary"></i>
-                        </button>
+                  </div>
+                  
+                  <!-- SLIDE 2 -->
+                  <div class="carousel-item">
+                    <i class="bi bi-quote text-primary display-4"></i>
+                    <h2 class="fw-bold my-3">What Our Clients Say</h2>
+                    <p class="lead text-muted">"Acadify Solution transformed our entire digital presence. Their strategic approach and flawless execution helped us achieve a 250% increase in online conversions within just six months."</p>
+                    <div class="d-flex align-items-center mt-4">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" class="rounded-circle" alt="Rajesh Kumar" style="width: 60px; height: 60px;">
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-0">Rajesh Kumar</h6>
+                        <small class="text-muted">CEO at TechStart Solutions</small>
+                      </div>
                     </div>
+                  </div>
+                  
+                  <!-- SLIDE 3 -->
+                  <div class="carousel-item">
+                    <i class="bi bi-quote text-primary display-4"></i>
+                    <h2 class="fw-bold my-3">What Our Clients Say</h2>
+                    <p class="lead text-muted">"The team at Acadify delivered beyond our expectations. Their innovative mobile app solution increased our customer engagement by 180% and streamlined our entire business process."</p>
+                    <div class="d-flex align-items-center mt-4">
+                      <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80" class="rounded-circle" alt="Priya Sharma" style="width: 60px; height: 60px;">
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-0">Priya Sharma</h6>
+                        <small class="text-muted">Product Manager at InnovateCorp</small>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                
+                <!-- Custom Carousel Controls -->
+                <div class="carousel-controls text-end mt-3">
+                  <button class="btn btn-outline-primary rounded-circle me-2" type="button" data-bs-target="#testimonialCardSlider" data-bs-slide="prev">
+                    <i class="bi bi-arrow-left"></i>
+                  </button>
+                  <button class="btn btn-outline-primary rounded-circle" type="button" data-bs-target="#testimonialCardSlider" data-bs-slide="next">
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <!-- === Right Column: Call to Action === -->
-            <div class="col-lg-6 text-white text-center text-lg-start py-5">
-                <h1 class="display-3 fw-bold lh-1">Ready to Start Your Project?</h1>
-                <p class="lead my-4">Let's work together to build something remarkable. Contact our experts today for a free consultation.</p>
-                <div>
-                    <button class="btn btn-light btn-lg rounded-pill px-4 me-2" onclick="handleGetQuote()">Get a Free Quote</button>
-                    <button class="btn btn-outline-light btn-lg rounded-pill px-4" onclick="handleLearnMore()">Learn More</button>
-                </div>
+          <!-- Right Part (CTA) -->
+          <div class="col-lg-5 ps-lg-5 text-white text-center text-lg-start">
+            <h1 class="display-3 fw-bold lh-1">Ready to Start Your Project?</h1>
+            <p class="lead my-4">Let's work together to build something remarkable. Contact our experts today for a free consultation.</p>
+            <div>
+<a href="your-quote-page.html" class="btn btn-light btn-lg rounded-pill px-4 me-2" style="color: red !important;">
+  Get a Free Quote
+</a>
+
+<a href="your-learnmore-page.html" class="btn btn-outline-light btn-lg rounded-pill px-4" style="color: red !important">
+  Learn More
+</a>
+
             </div>
-            
+          </div>
+
         </div>
+      </div>
     </div>
+  </div>
 </section>
