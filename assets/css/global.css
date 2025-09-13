@@ -312,46 +312,6 @@ html {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Dark Theme Support */
-[data-bs-theme="dark"] {
-  --white: #212529;
-  --light-gray: #2D3136;
-  --muted-gray: #ADB5BD;
-  --dark-charcoal: #F8F9FA;
-}
-
-[data-bs-theme="dark"] body {
-  background-color: var(--white);
-  color: var(--muted-gray);
-}
-
-[data-bs-theme="dark"] h1,
-[data-bs-theme="dark"] h2,
-[data-bs-theme="dark"] h3,
-[data-bs-theme="dark"] h4,
-[data-bs-theme="dark"] h5,
-[data-bs-theme="dark"] h6 {
-  color: var(--dark-charcoal);
-}
-
-[data-bs-theme="dark"] .card {
-  background-color: var(--light-gray);
-  border-color: #495057;
-}
-
-[data-bs-theme="dark"] .dropdown-menu {
-  background-color: var(--light-gray);
-  border-color: #495057;
-}
-
-[data-bs-theme="dark"] .dropdown-item {
-  color: var(--muted-gray);
-}
-
-[data-bs-theme="dark"] .dropdown-item:hover {
-  background-color: #495057;
-  color: var(--primary-blue);
-}
 
 /* Service Cards Enhanced Hover Effect */
 .service-card {

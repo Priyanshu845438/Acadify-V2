@@ -1,19 +1,47 @@
-/* Footer Component Styles */
+/* Footer Component Styles - Mobile First */
+
+/* Base styles for mobile (<576px) */
+.footer-dark {
+  margin-top: auto;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d) !important;
+  color: white;
+  padding: 3rem 0 2rem;
+}
 
 footer {
   margin-top: auto;
   background: linear-gradient(135deg, #1a1a1a, #2d2d2d) !important;
+  color: white;
+  padding: 3rem 0 2rem;
+}
+
+/* White text utilities */
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 /* Footer links */
-footer a {
-  color: rgba(255, 255, 255, 0.7);
+.footer-link {
+  color: rgba(255, 255, 255, 0.8) !important;
   text-decoration: none;
-  transition: var(--transition-base);
+  transition: font-weight 0.3s ease;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: font-weight 0.3s ease;
 }
 
 footer a:hover {
-  color: var(--bs-primary) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -72,24 +100,165 @@ footer hr {
 }
 
 footer .text-muted {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
-/* Responsive footer */
-@media (max-width: 768px) {
-  footer .col-lg-4,
-  footer .col-lg-2,
-  footer .col-md-6 {
-    margin-bottom: 2rem;
+/* Ensure all footer text is visible */
+footer h4, 
+footer h5, 
+footer h6 {
+  color: white !important;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer strong {
+  color: white !important;
+}
+
+/* Override any Bootstrap classes that might interfere */
+footer .text-dark {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer .text-primary {
+  color: white !important;
+}
+
+/* Footer content spacing */
+footer .row > div {
+  margin-bottom: 2rem;
+}
+
+footer h4,
+footer h5,
+footer h6 {
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.75rem;
+}
+
+footer .footer-link {
+  display: block;
+  padding: 0.5rem 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* Social icons mobile */
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+footer .social-links a {
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+}
+
+/* Contact info mobile */
+.footer-contact {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Copyright section mobile */
+.footer-copyright {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.footer-copyright > div {
+  margin-bottom: 1rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .footer-dark,
+  footer {
+    padding: 4rem 0 2.5rem;
+  }
+
+  footer h4,
+  footer h5,
+  footer h6 {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .footer-dark,
+  footer {
+    padding: 5rem 0 3rem;
+  }
+
+  footer .row > div {
+    margin-bottom: 0;
+  }
+
+  footer h4,
+  footer h5,
+  footer h6 {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  .footer-contact {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  footer .social-links {
+    justify-content: flex-start;
+    margin: 1rem 0;
+  }
+
+  .footer-copyright {
+    text-align: left;
+  }
+
+  .footer-copyright > div {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .footer-dark,
+  footer {
+    padding: 6rem 0 3rem;
+  }
+
+  footer .social-links a {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  footer .social-links a:hover {
+    transform: none;
   }
   
-  footer .input-group {
-    flex-direction: column;
-  }
-  
-  footer .input-group .btn {
-    margin-top: 0.5rem;
-    border-top-left-radius: 0.375rem;
-    border-bottom-left-radius: 0.375rem;
+  footer .footer-link:hover {
+    font-weight: normal;
   }
 }

@@ -11,9 +11,6 @@
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
 }
 
-[data-bs-theme="dark"] .card-hover:hover {
-  box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.1) !important;
-}
 
 /* Feature icon styling */
 .feature-icon {
@@ -35,9 +32,6 @@
   transition: var(--transition-base);
 }
 
-[data-bs-theme="dark"] .card-hover .card-title {
-  color: var(--bs-light);
-}
 
 .card-hover:hover .card-title {
   color: var(--bs-primary);
