@@ -253,26 +253,26 @@
                     <div class="card border-0 shadow-lg">
                         <div class="card-body p-5">
                             <h4 class="fw-bold mb-4">Partnership Inquiry</h4>
-                            <form>
+                            <form id="partnershipForm" method="POST">
                                 <div class="mb-3">
                                     <label for="companyName" class="form-label">Company Name</label>
-                                    <input type="text" class="form-control" id="companyName" required>
+                                    <input type="text" class="form-control" id="companyName" name="company_name" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="contactName" class="form-label">Contact Person</label>
-                                    <input type="text" class="form-control" id="contactName" required>
+                                    <input type="text" class="form-control" id="contactName" name="contact_person" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Business Email</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone" required>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
                                 </div>
                                 <div class="mb-3">
                                     <label for="partnershipType" class="form-label">Partnership Interest</label>
-                                    <select class="form-select" id="partnershipType" required>
+                                    <select class="form-select" id="partnershipType" name="business_type">
                                         <option value="">Select partnership type</option>
                                         <option value="technology">Technology Partnership</option>
                                         <option value="reseller">Reseller Partnership</option>
@@ -282,8 +282,11 @@
                                 </div>
                                 <div class="mb-4">
                                     <label for="message" class="form-label">Tell us about your company</label>
-                                    <textarea class="form-control" id="message" rows="3" placeholder="Brief description of your company and partnership goals"></textarea>
+                                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Brief description of your company and partnership goals"></textarea>
                                 </div>
+                                
+                                <div id="partnership-form-message" class="mb-3" style="display: none;"></div>
+                                
                                 <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill">
                                     <i class="bi bi-send me-2"></i>Submit Partnership Inquiry
                                 </button>
@@ -307,6 +310,67 @@
     <script src="/assets/js/components.js"></script>
     <!-- Main JS -->
     <script src="/assets/js/main.js"></script>
+    
+    <script>
+        // Partnership Form Handler
+        document.getElementById('partnershipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            const messageDiv = document.getElementById('partnership-form-message');
+            
+            // Show loading state
+            button.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Submitting...';
+            button.disabled = true;
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Submit to PHP handler
+            fetch('/handlers/partner_handler.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    messageDiv.innerHTML = `<div class="alert alert-success"><i class="bi bi-check-circle me-2"></i>${data.message}</div>`;
+                    messageDiv.style.display = 'block';
+                    
+                    button.innerHTML = '<i class="bi bi-check-circle me-2"></i>Inquiry Submitted!';
+                    button.classList.remove('btn-primary');
+                    button.classList.add('btn-success');
+                    
+                    // Reset form after 5 seconds
+                    setTimeout(() => {
+                        this.reset();
+                        button.innerHTML = originalText;
+                        button.classList.remove('btn-success');
+                        button.classList.add('btn-primary');
+                        button.disabled = false;
+                        messageDiv.style.display = 'none';
+                    }, 5000);
+                } else {
+                    // Show error message
+                    messageDiv.innerHTML = `<div class="alert alert-danger"><i class="bi bi-exclamation-triangle me-2"></i>${data.message}</div>`;
+                    messageDiv.style.display = 'block';
+                    
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                messageDiv.innerHTML = '<div class="alert alert-danger"><i class="bi bi-exclamation-triangle me-2"></i>Sorry, there was an error submitting your inquiry. Please try again.</div>';
+                messageDiv.style.display = 'block';
+                
+                button.innerHTML = originalText;
+                button.disabled = false;
+            });
+        });
+    </script>
 
     <style>
         .partners-slider {

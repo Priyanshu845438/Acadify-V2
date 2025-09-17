@@ -1,0 +1,20 @@
+Core Brief:
+"Create a sophisticated, animated isometric scene for a professional tech company. The scene should depict a continuous loop of digital innovation and analysis.
+Visual Elements (The Static Foundation):
+Subject: A professional person with a focused expression, working at a modern, minimalist desk with a sleek laptop and a large external monitor.
+Style: Clean, corporate isometric vector illustration. No cartoonish features.
+Color Palette: Strictly adhere to a corporate palette: deep navy blue (#0A2540), primary blue (#0D6EFD), light gray, and white accents.
+Format: The final output should be a Lottie JSON file for use on the web.
+Advanced Animation & Interactivity (The "Movable" Core):
+The animation should be a seamless, subtle, and professional loop, broken down into distinct layers of movement to create a sense of depth and activity:
+The "On-Scroll Reveal" (Initial State): When the component first scrolls into view, the scene should build itself over 1.5 seconds:
+The desk and chair slide smoothly into place.
+The person and computer fade in.
+The holographic UI elements materialize one by one with a soft, glowing effect.
+The "Idle Loop" (Continuous Animation): After the reveal, the scene enters a continuous, gentle loop:
+Holographic UI: The floating data graph, code window, and nodes should drift slowly and subtly up and down, out of sync with each other, creating a sense of constant processing.
+Data Flow: Faint, glowing blue lines should animate, flowing from the laptop screen towards the holographic elements, visualizing the transfer of information.
+Pulsing Nodes: The abstract connection nodes should gently pulse with a soft blue light.
+The Person: The person remains mostly still and focused, with only very subtle movements, like a slight head tilt or a slow, deliberate keystroke every few seconds to show they are actively engaged.
+(Optional) On-Hover Interaction:
+When a user's mouse hovers over the illustration, the animation speed of the "Data Flow" lines should slightly increase, and the holographic elements should brighten, making the scene feel responsive and interactive.

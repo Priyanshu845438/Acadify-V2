@@ -55,17 +55,17 @@
                     <div class="card border-0 shadow-lg">
                         <div class="card-body p-5">
                             <h3 class="fw-bold mb-4">Send us a Message</h3>
-                            <form id="contactForm">
+                            <form id="contactForm" method="POST">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
                                             <label for="firstName">First Name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
                                             <label for="lastName">Last Name</label>
                                         </div>
                                     </div>
@@ -74,13 +74,13 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
                                             <label for="email">Email Address</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
                                             <label for="phone">Phone Number</label>
                                         </div>
                                     </div>
@@ -88,8 +88,8 @@
                                 
                                 <div class="mb-3">
                                     <div class="form-floating">
-                                        <select class="form-select" id="projectType">
-                                            <option selected disabled>Select Project Type</option>
+                                        <select class="form-select" id="projectType" name="projectType">
+                                            <option selected disabled value="">Select Project Type</option>
                                             <option value="web-development">Web Development</option>
                                             <option value="mobile-app">Mobile App Development</option>
                                             <option value="ecommerce">E-commerce Solution</option>
@@ -103,10 +103,12 @@
                                 
                                 <div class="mb-4">
                                     <div class="form-floating">
-                                        <textarea class="form-control" id="message" style="height: 120px" placeholder="Your Message" required></textarea>
+                                        <textarea class="form-control" id="message" name="message" style="height: 120px" placeholder="Your Message" required></textarea>
                                         <label for="message">Tell us about your project</label>
                                     </div>
                                 </div>
+                                
+                                <div id="form-message" class="mb-3" style="display: none;"></div>
                                 
                                 <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill">
                                     <i class="bi bi-send me-2"></i>Send Message
@@ -265,27 +267,68 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-            
-            // Show success message
             const button = this.querySelector('button[type="submit"]');
             const originalText = button.innerHTML;
+            const messageDiv = document.getElementById('form-message');
             
-            button.innerHTML = '<i class="bi bi-check-circle me-2"></i>Message Sent!';
-            button.classList.remove('btn-primary');
-            button.classList.add('btn-success');
+            // Show loading state
+            button.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
             button.disabled = true;
             
-            // Reset form after 3 seconds
-            setTimeout(() => {
-                this.reset();
+            // Combine first name and last name
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const fullName = `${firstName} ${lastName}`.trim();
+            
+            // Get form data
+            const formData = new FormData();
+            formData.append('name', fullName);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('phone', document.getElementById('phone').value);
+            formData.append('message', `Project Type: ${document.getElementById('projectType').value || 'Not specified'}\n\n${document.getElementById('message').value}`);
+            
+            // Submit to PHP handler
+            fetch('/handlers/contact_handler.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    messageDiv.innerHTML = `<div class="alert alert-success"><i class="bi bi-check-circle me-2"></i>${data.message}</div>`;
+                    messageDiv.style.display = 'block';
+                    
+                    button.innerHTML = '<i class="bi bi-check-circle me-2"></i>Message Sent!';
+                    button.classList.remove('btn-primary');
+                    button.classList.add('btn-success');
+                    
+                    // Reset form after 3 seconds
+                    setTimeout(() => {
+                        this.reset();
+                        button.innerHTML = originalText;
+                        button.classList.remove('btn-success');
+                        button.classList.add('btn-primary');
+                        button.disabled = false;
+                        messageDiv.style.display = 'none';
+                    }, 3000);
+                } else {
+                    // Show error message
+                    messageDiv.innerHTML = `<div class="alert alert-danger"><i class="bi bi-exclamation-triangle me-2"></i>${data.message}</div>`;
+                    messageDiv.style.display = 'block';
+                    
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                messageDiv.innerHTML = '<div class="alert alert-danger"><i class="bi bi-exclamation-triangle me-2"></i>Sorry, there was an error sending your message. Please try again.</div>';
+                messageDiv.style.display = 'block';
+                
                 button.innerHTML = originalText;
-                button.classList.remove('btn-success');
-                button.classList.add('btn-primary');
                 button.disabled = false;
-            }, 3000);
+            });
         });
     </script>
 

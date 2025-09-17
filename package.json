@@ -1,0 +1,21 @@
+{
+  "name": "techsite-static",
+  "version": "1.0.0",
+  "description": "Modern static website for Ideovent Technologies",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server . -p 5000 -a 0.0.0.0 --cors -c-1",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "static",
+    "bootstrap",
+    "responsive",
+    "website"
+  ],
+  "author": "Ideovent Technologies",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

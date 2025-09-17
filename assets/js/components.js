@@ -219,6 +219,22 @@ class ComponentLoader {
 // Initialize component loader
 const componentLoader = new ComponentLoader();
 
+// Function to ensure quote modal is globally available on all pages
+function ensureQuoteModalAvailability() {
+    // Check if quote modal container exists
+    let quoteModalContainer = document.getElementById('quote-modal-container');
+    
+    // If it doesn't exist, create it and append to body
+    if (!quoteModalContainer) {
+        quoteModalContainer = document.createElement('div');
+        quoteModalContainer.id = 'quote-modal-container';
+        document.body.appendChild(quoteModalContainer);
+    }
+    
+    // Load the quote modal component
+    componentLoader.loadComponent('#quote-modal-container', '/components/quote-modal.html');
+}
+
 // Function to initialize all components
 function initializeComponents() {
     // Load main components
@@ -232,6 +248,9 @@ function initializeComponents() {
     componentLoader.loadComponent('#latest-blogs-section', '/components/latest-blogs.html');
     componentLoader.loadComponent('#testimonial-cta-section', '/components/testimonial-cta.html');
     componentLoader.loadComponent('#bottom-cta-section', '/components/cta.html');
+    
+    // Ensure quote modal is globally available on all pages
+    ensureQuoteModalAvailability();
     
     // Load service cards with different content
     componentLoader.loadServiceCard('#service-card-1', 'bi-code-slash', 'Software Development', 'We provide custom software development for your business, Billing, Inventory and every custom solution.');
