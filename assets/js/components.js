@@ -251,6 +251,19 @@ function initializeComponents() {
     
     // Ensure quote modal is globally available on all pages
     ensureQuoteModalAvailability();
+<<<<<<< HEAD
+=======
+    
+    // Load service cards with different content
+    componentLoader.loadServiceCard('#service-card-1', 'bi-code-slash', 'Software Development', 'We provide custom software development for your business, Billing, Inventory and every custom solution.');
+    componentLoader.loadServiceCard('#service-card-2', 'bi-globe', 'Website Development', 'We provide website design & development to make your business online to drive more customers and sales.');
+    componentLoader.loadServiceCard('#service-card-3', 'bi-phone', 'Mobile App Development', 'We provide Android & iOS app development. Turn your idea into reality and start your startup with us.');
+    componentLoader.loadServiceCard('#service-card-4', 'bi-megaphone', 'Digital Marketing', 'We provide the best digital marketing services to drive more traffic on your mobile app or website.');
+    componentLoader.loadServiceCard('#service-card-5', 'bi-server', 'Domain & Hosting', 'We provide domain, hosting and reliable servers to never let your business down.');
+    componentLoader.loadServiceCard('#service-card-6', 'bi-diagram-3', 'ERP & CRM Development', 'We provide ERP & CRM to automate your business with fast execution and precise strategies.');
+    componentLoader.loadServiceCard('#service-card-7', 'bi-tools', 'Maintenance Services', 'We provide annual maintenance services for websites, software, ERP, CRM & mobile apps.');
+    componentLoader.loadServiceCard('#service-card-8', 'bi-plus-circle', 'Explore More Services', 'We provide IT training, internships, MLM software and many more services to discover.');
+>>>>>>> 9b1f48416055eee4e7278e290d517b86ec1df5fa
     
     // Load service cards with rewritten, India-focused content
     componentLoader.loadServiceCard('#service-card-1', 'bi-globe', 'Web Development for India', 'We build high-performance websites that dominate search rankings in Delhi, Mumbai, and Kolkata, turning visitors into customers.');
