@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Ideovent Blog - Industry insights, best practices, and thought leadership in web development, digital marketing, and technology trends">
+    <meta name="author" content="Ideovent Technologies">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="The Ideovent Blog - Technology Insights & Best Practices">
+    <meta property="og:description" content="Explore our expert insights on web development, digital marketing, and technology trends">
+    <meta property="og:type" content="website">
+    
+    <title>The Ideovent Blog - Technology Insights & Best Practices</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Component CSS Files -->
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/components/navbar.css">
+    <link rel="stylesheet" href="/assets/css/components/hero.css">
+    <link rel="stylesheet" href="/assets/css/components/feature-card.css">
+    <link rel="stylesheet" href="/assets/css/components/footer.css">
+    <link rel="stylesheet" href="/assets/css/components/testimonial-cta.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="site-header"></div>
+    
+    <!-- Hero Section -->
+    <section class="page-header-section py-5 bg-primary bg-gradient text-white">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <h1 class="display-4 fw-bold mb-4">The Ideovent Blog</h1>
+                    <p class="lead mb-5">Insights, best practices, and thought leadership from our experts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="d-flex flex-wrap justify-content-center gap-2" id="blog-filters">
+                        <button class="btn btn-primary rounded-pill px-4 filter-btn active" data-filter="all">
+                            All Posts
+                        </button>
+                        <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="web-development">
+                            Web Development
+                        </button>
+                        <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="digital-marketing">
+                            Digital Marketing
+                        </button>
+                        <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="mobile-apps">
+                            Mobile Apps
+                        </button>
+                        <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="industry-insights">
+                            Industry Insights
+                        </button>
+                        <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="technology-trends">
+                            Tech Trends
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4" id="blog-grid">
+                
+                <!-- Featured Blog Post 1 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="technology-trends">
+                    <article class="card h-100 border-0 shadow-sm hover-shadow" style="background-color: #FFFBEB;">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" 
+                             alt="AI Revolution in Software Testing"
+                             style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-primary-subtle text-primary">Tech Trends</span>
+                                <small class="text-muted">Dec 10, 2024</small>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">The AI Revolution in Software Testing: A Complete Guide to Modern QA</h5>
+                            <p class="card-text text-muted mb-3">Discover how artificial intelligence is transforming software testing processes, reducing testing time by 60%, and improving quality assurance outcomes...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" 
+                                         alt="Rahul Sharma" 
+                                         class="rounded-circle me-2"
+                                         style="width: 25px; height: 25px; object-fit: cover;">
+                                    <small class="text-muted">Rahul Sharma</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="web-development">
+                    <article class="card h-100 border-0 shadow-sm hover-shadow" style="background-color: #FFFBEB;">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" 
+                             alt="Modern QA Operating Models"
+                             style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-success-subtle text-success">Web Development</span>
+                                <small class="text-muted">Dec 8, 2024</small>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Building Scalable Web Applications: Best Practices for 2025</h5>
+                            <p class="card-text text-muted mb-3">Learn the essential practices for creating web applications that can handle millions of users while maintaining optimal performance and user experience...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80" 
+                                         alt="Priya Singh" 
+                                         class="rounded-circle me-2"
+                                         style="width: 25px; height: 25px; object-fit: cover;">
+                                    <small class="text-muted">Priya Singh</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="digital-marketing">
+                    <article class="card h-100 border-0 shadow-sm hover-shadow" style="background-color: #FFFBEB;">
+                        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" 
+                             alt="Digital Marketing Strategies"
+                             style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-warning-subtle text-warning">Digital Marketing</span>
+                                <small class="text-muted">Dec 5, 2024</small>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">ROI-Driven Digital Marketing: Strategies That Actually Work</h5>
+                            <p class="card-text text-muted mb-3">Explore proven digital marketing strategies that deliver measurable ROI, with real examples from successful campaigns we've managed...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" 
+                                         alt="Vikram Kumar" 
+                                         class="rounded-circle me-2"
+                                         style="width: 25px; height: 25px; object-fit: cover;">
+                                    <small class="text-muted">Vikram Kumar</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="mobile-apps">
+                    <article class="card h-100 border-0 shadow-sm hover-shadow" style="background-color: #FFFBEB;">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" 
+                             alt="Mobile App Development"
+                             style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-info-subtle text-info">Mobile Apps</span>
+                                <small class="text-muted">Dec 3, 2024</small>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Flutter vs React Native: Making the Right Choice in 2025</h5>
+                            <p class="card-text text-muted mb-3">A comprehensive comparison of leading cross-platform frameworks based on real project experiences and performance benchmarks...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=100&q=80" 
+                                         alt="Arjun Patel" 
+                                         class="rounded-circle me-2"
+                                         style="width: 25px; height: 25px; object-fit: cover;">
+                                    <small class="text-muted">Arjun Patel</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="industry-insights">
+                    <article class="card h-100 border-0 shadow-sm hover-shadow" style="background-color: #FFFBEB;">
+                        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" 
+                             alt="Cloud Native Testing"
+                             style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-secondary-subtle text-secondary">Industry Insights</span>
+                                <small class="text-muted">Dec 1, 2024</small>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">The Future of Indian Tech Industry: Trends to Watch in 2025</h5>
+                            <p class="card-text text-muted mb-3">Analyze emerging trends shaping India's technology landscape, from AI adoption to startup ecosystem evolution and global market positioning...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" 
+                                         alt="Rajesh Gupta" 
+                                         class="rounded-circle me-2"
+                                         style="width: 25px; height: 25px; object-fit: cover;">
+                                    <small class="text-muted">Rajesh Gupta</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Post 6 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="web-development">
+                    <article class="card h-100 border-0 shadow-sm hover-shadow" style="background-color: #FFFBEB;">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" 
+                             alt="Progressive Web Apps"
+                             style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-success-subtle text-success">Web Development</span>
+                                <small class="text-muted">Nov 28, 2024</small>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Progressive Web Apps: The Ultimate Guide to PWA Development</h5>
+                            <p class="card-text text-muted mb-3">Master Progressive Web App development with our comprehensive guide covering service workers, app manifests, and offline functionality...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80" 
+                                         alt="Sneha Reddy" 
+                                         class="rounded-circle me-2"
+                                         style="width: 25px; height: 25px; object-fit: cover;">
+                                    <small class="text-muted">Sneha Reddy</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Post 7 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="digital-marketing">
+                    <article class="card h-100 border-0 shadow-sm hover-shadow" style="background-color: #FFFBEB;">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" 
+                             alt="SEO Optimization"
+                             style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-warning-subtle text-warning">Digital Marketing</span>
+                                <small class="text-muted">Nov 25, 2024</small>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">SEO in 2025: Advanced Strategies for Voice Search & AI</h5>
+                            <p class="card-text text-muted mb-3">Stay ahead with cutting-edge SEO techniques optimized for voice search, AI algorithms, and emerging search technologies...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" 
+                                         alt="Amit Joshi" 
+                                         class="rounded-circle me-2"
+                                         style="width: 25px; height: 25px; object-fit: cover;">
+                                    <small class="text-muted">Amit Joshi</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Post 8 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="technology-trends">
+                    <article class="card h-100 border-0 shadow-sm hover-shadow" style="background-color: #FFFBEB;">
+                        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" 
+                             alt="Blockchain Technology"
+                             style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-primary-subtle text-primary">Tech Trends</span>
+                                <small class="text-muted">Nov 22, 2024</small>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Blockchain Beyond Crypto: Real-World Business Applications</h5>
+                            <p class="card-text text-muted mb-3">Explore practical blockchain implementations in supply chain, healthcare, and finance sectors with case studies and implementation strategies...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" 
+                                         alt="Karan Mehta" 
+                                         class="rounded-circle me-2"
+                                         style="width: 25px; height: 25px; object-fit: cover;">
+                                    <small class="text-muted">Karan Mehta</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Post 9 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="mobile-apps">
+                    <article class="card h-100 border-0 shadow-sm hover-shadow" style="background-color: #FFFBEB;">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" 
+                             alt="Mobile App Security"
+                             style="height: 200px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-info-subtle text-info">Mobile Apps</span>
+                                <small class="text-muted">Nov 20, 2024</small>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Mobile App Security: Essential Best Practices for 2025</h5>
+                            <p class="card-text text-muted mb-3">Comprehensive guide to securing mobile applications with the latest security protocols, encryption methods, and vulnerability assessments...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=100&q=80" 
+                                         alt="Divya Sharma" 
+                                         class="rounded-circle me-2"
+                                         style="width: 25px; height: 25px; object-fit: cover;">
+                                    <small class="text-muted">Divya Sharma</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="text-center py-5 d-none">
+                <i class="bi bi-search display-1 text-muted mb-3"></i>
+                <h3 class="text-muted">No posts found</h3>
+                <p class="text-muted">Try selecting a different category filter.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="py-4">
+        <div class="container">
+            <nav aria-label="Blog pagination">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                            <i class="bi bi-chevron-left"></i>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-5 bg-primary bg-gradient text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-6 fw-bold mb-4">Stay Updated with Our Latest Insights</h2>
+                    <p class="lead mb-4">Subscribe to our newsletter for weekly tech insights, industry trends, and expert tips.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="input-group input-group-lg">
+                                <input type="email" class="form-control" placeholder="Enter your email address">
+                                <button class="btn btn-light" type="button">
+                                    <i class="bi bi-envelope-at me-2"></i>Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <div id="testimonial-cta-section"></div>
+    
+    <!-- Footer -->
+    <div id="site-footer"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Component Loader -->
+    <script src="/assets/js/components.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/js/main.js"></script>
+
+    <script>
+        // Blog Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const blogPosts = document.querySelectorAll('.blog-post');
+            const noResults = document.getElementById('no-results');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('btn-primary', 'active');
+                        btn.classList.add('btn-outline-primary');
+                    });
+                    this.classList.remove('btn-outline-primary');
+                    this.classList.add('btn-primary', 'active');
+
+                    // Filter posts
+                    let visibleCount = 0;
+                    blogPosts.forEach(post => {
+                        const category = post.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            post.style.display = 'block';
+                            post.classList.add('animate__animated', 'animate__fadeIn');
+                            visibleCount++;
+                        } else {
+                            post.style.display = 'none';
+                            post.classList.remove('animate__animated', 'animate__fadeIn');
+                        }
+                    });
+
+                    // Show/hide no results message
+                    if (visibleCount === 0) {
+                        noResults.classList.remove('d-none');
+                    } else {
+                        noResults.classList.add('d-none');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .hover-shadow {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.15)!important;
+        }
+
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+
+        .animate__animated {
+            animation-duration: 0.5s;
+        }
+
+        .animate__fadeIn {
+            animation-name: fadeIn;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</body>
+</html>

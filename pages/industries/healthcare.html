@@ -1,79 +1,488 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-bs-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Healthcare & Life Sciences Solutions - Ideovent Technologies</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/components/navbar.css">
-    <link rel="stylesheet" href="/assets/css/components/footer.css">
-    <link rel="stylesheet" href="/assets/css/components/hero.css">
-</head>
-<body>
-    <div id="site-header"></div>
-    
-    <!-- FLUSH HERO SECTION -->
-    <section class="hero-flush">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Left Column: Content -->
-                <div class="col-lg-6 text-white text-center text-lg-start">
-                    <h1 class="display-3 fw-bold hero-headline">Healthcare & Life Sciences Solutions</h1>
-                    <p class="lead my-4 hero-description">Digital healthcare solutions including telemedicine platforms, patient management systems, and healthcare analytics that improve patient outcomes.</p>
-                    <a href="/pages/contact.html" class="btn btn-light btn-lg rounded-pill px-4 fw-bold">Get Healthcare Solutions</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Advanced healthcare technology solutions including telemedicine, EHR systems, patient management, and healthcare analytics for improved patient outcomes."
+        />
+        <meta name="author" content="Ideovent Technologies" />
+
+        <title>
+            Healthcare & Life Sciences Solutions - Ideovent Technologies
+        </title>
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        />
+
+        <!-- Component CSS Files -->
+        <link rel="stylesheet" href="/assets/css/global.css" />
+        <link rel="stylesheet" href="/assets/css/components/navbar.css" />
+        <link rel="stylesheet" href="/assets/css/components/feature-card.css" />
+        <link rel="stylesheet" href="/assets/css/components/footer.css" />
+        <link
+            rel="stylesheet"
+            href="/assets/css/components/testimonial-cta.css"
+        />
+        <link rel="stylesheet" href="/assets/css/components/hero.css" />
+    </head>
+    <body>
+        <div id="site-header"></div>
+
+        <!-- FLUSH HERO SECTION -->
+        <section class="hero-flush">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left Column: Content -->
+                    <div class="col-lg-6 text-white text-center text-lg-start">
+                        <h1 class="display-3 fw-bold hero-headline">
+                            Advanced Healthcare Technology Solutions for Better
+                            Patient Outcomes
+                        </h1>
+                        <p class="lead my-4 hero-description">
+                            Empowering healthcare providers with innovative
+                            digital solutions including telemedicine, EHR
+                            systems, patient management, and healthcare
+                            analytics that transform patient care.
+                        </p>
+                        <a
+                            href="/pages/contact.html"
+                            class="btn btn-light btn-lg rounded-pill px-4 fw-bold"
+                            >Transform Your Healthcare Practice</a
+                        >
+                    </div>
+                    <!-- Right Column: Visual -->
+                    <div class="col-lg-6">
+                        <img
+                            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+                            alt="Healthcare Technology"
+                            class="img-fluid hero-visual"
+                        />
+                    </div>
                 </div>
-                <!-- Right Column: Visual -->
-                <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Healthcare Technology" class="img-fluid hero-visual">
+            </div>
+            <!-- Shape Divider at the bottom -->
+            <div class="hero-shape-divider">
+                <svg
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M1200 120L0 120 0 0 1200 0 1200 120z"
+                        class="shape-fill"
+                    ></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Healthcare Challenges Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4">
+                        Critical Challenges in Modern Healthcare
+                    </h2>
+                    <p class="lead text-muted">
+                        Addressing the complex challenges healthcare providers
+                        face in delivering quality patient care
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i
+                                    class="bi bi-shield-exclamation display-4 text-danger mb-3"
+                                ></i>
+                                <h5 class="fw-bold">Data Security & Privacy</h5>
+                                <p class="card-text">
+                                    Ensuring HIPAA compliance and protecting
+                                    sensitive patient data from cyber threats
+                                    while maintaining seamless access for
+                                    healthcare providers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i
+                                    class="bi bi-people display-4 text-warning mb-3"
+                                ></i>
+                                <h5 class="fw-bold">Patient Engagement</h5>
+                                <p class="card-text">
+                                    Creating meaningful patient interactions and
+                                    improving care coordination while managing
+                                    increasing patient volumes and expectations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i
+                                    class="bi bi-diagram-3 display-4 text-info mb-3"
+                                ></i>
+                                <h5 class="fw-bold">System Interoperability</h5>
+                                <p class="card-text">
+                                    Integrating disparate healthcare systems and
+                                    enabling seamless data sharing between
+                                    providers, labs, and specialists.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Solutions for Healthcare -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4">
+                        Comprehensive Healthcare Technology Solutions
+                    </h2>
+                    <p class="lead text-muted">
+                        Advanced digital health solutions designed to improve
+                        patient outcomes and operational efficiency
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i
+                                    class="bi bi-laptop display-3 text-primary mb-3"
+                                ></i>
+                                <h5 class="fw-bold">Telemedicine Platforms</h5>
+                                <p class="card-text">
+                                    Complete telehealth solutions with video
+                                    consultations, remote monitoring, and secure
+                                    patient communication portals.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i
+                                    class="bi bi-file-medical display-3 text-success mb-3"
+                                ></i>
+                                <h5 class="fw-bold">
+                                    Electronic Health Records
+                                </h5>
+                                <p class="card-text">
+                                    HIPAA-compliant EHR systems with
+                                    interoperability, clinical decision support,
+                                    and comprehensive patient data management.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i
+                                    class="bi bi-person-check display-3 text-warning mb-3"
+                                ></i>
+                                <h5 class="fw-bold">
+                                    Patient Management Systems
+                                </h5>
+                                <p class="card-text">
+                                    Comprehensive patient portals with
+                                    appointment scheduling, prescription
+                                    management, and care coordination tools.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i
+                                    class="bi bi-graph-up display-3 text-info mb-3"
+                                ></i>
+                                <h5 class="fw-bold">Healthcare Analytics</h5>
+                                <p class="card-text">
+                                    Advanced analytics and reporting tools for
+                                    population health management, outcome
+                                    tracking, and evidence-based care.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i
+                                    class="bi bi-heart-pulse display-3 text-danger mb-3"
+                                ></i>
+                                <h5 class="fw-bold">
+                                    Medical Device Integration
+                                </h5>
+                                <p class="card-text">
+                                    IoT healthcare solutions connecting medical
+                                    devices, wearables, and monitoring equipment
+                                    for real-time patient data.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i
+                                    class="bi bi-shield-check display-3 text-secondary mb-3"
+                                ></i>
+                                <h5 class="fw-bold">Compliance & Security</h5>
+                                <p class="card-text">
+                                    HIPAA compliance frameworks, data
+                                    encryption, audit trails, and comprehensive
+                                    cybersecurity for healthcare data.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Case Study -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="text-center mb-4">
+                            <div
+                                class="bg-primary text-white p-3 rounded-3 d-inline-block mb-3"
+                            >
+                                <h4 class="fw-bold mb-0">
+                                    CareConnect Hospital
+                                </h4>
+                            </div>
+                        </div>
+                        <h3 class="fw-bold mb-3">Challenge</h3>
+                        <p class="mb-4">
+                            A 500-bed hospital needed to modernize their patient
+                            management system and implement telemedicine
+                            capabilities while ensuring HIPAA compliance and
+                            improving patient satisfaction.
+                        </p>
+
+                        <h3 class="fw-bold mb-3">Solution</h3>
+                        <p class="mb-4">
+                            We developed an integrated healthcare ecosystem with
+                            EHR, telemedicine platform, patient portal, and
+                            analytics dashboard with robust security and
+                            compliance features.
+                        </p>
+
+                        <h3 class="fw-bold mb-3">Results</h3>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <h4 class="text-primary fw-bold">45%</h4>
+                                    <small>Reduction in Wait Times</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <h4 class="text-success fw-bold">92%</h4>
+                                    <small>Patient Satisfaction Score</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="btn btn-primary mt-4"
+                            data-bs-toggle="modal"
+                            data-bs-target="#caseStudyModal"
+                        >
+                            View Full Case Study
+                        </button>
+                    </div>
+                    <div class="col-lg-6">
+                        <img
+                            src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80"
+                            alt="Healthcare technology dashboard"
+                            class="img-fluid rounded-4 shadow"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Ideovent for Healthcare -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4">
+                        Why Ideovent for Healthcare Technology?
+                    </h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 text-center">
+                        <i class="bi bi-award display-4 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Healthcare Expertise</h5>
+                        <p class="text-muted">
+                            Deep understanding of healthcare workflows, clinical
+                            processes, and medical industry regulations and
+                            standards.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <i
+                            class="bi bi-shield-lock display-4 text-success mb-3"
+                        ></i>
+                        <h5 class="fw-bold">HIPAA Compliance</h5>
+                        <p class="text-muted">
+                            Proven track record in developing secure,
+                            HIPAA-compliant systems with advanced encryption and
+                            audit capabilities.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <i class="bi bi-heart display-4 text-info mb-3"></i>
+                        <h5 class="fw-bold">Patient-Centered Design</h5>
+                        <p class="text-muted">
+                            User-friendly interfaces designed with both
+                            healthcare providers and patients in mind for
+                            optimal care delivery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial-CTA Component -->
+        <div id="testimonial-cta-section"></div>
+
+        <!-- Case Study Modal -->
+        <div
+            class="modal fade"
+            id="caseStudyModal"
+            tabindex="-1"
+            aria-labelledby="caseStudyModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="caseStudyModalLabel">
+                            CareConnect Hospital - Complete Case Study
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 class="fw-bold">Project Overview</h6>
+                        <p>
+                            CareConnect Hospital, a 500-bed regional medical
+                            center serving 100,000+ patients annually, needed to
+                            modernize their healthcare IT infrastructure to
+                            improve patient outcomes and operational efficiency.
+                        </p>
+
+                        <h6 class="fw-bold mt-4">Technical Implementation</h6>
+                        <ul>
+                            <li>
+                                Cloud-based EHR system with real-time data
+                                synchronization
+                            </li>
+                            <li>
+                                HIPAA-compliant telemedicine platform with HD
+                                video conferencing
+                            </li>
+                            <li>
+                                Mobile patient portal with appointment
+                                scheduling and prescription refills
+                            </li>
+                            <li>
+                                IoT integration for medical device monitoring
+                            </li>
+                            <li>
+                                Advanced analytics dashboard for clinical
+                                decision support
+                            </li>
+                        </ul>
+
+                        <h6 class="fw-bold mt-4">Impact & Results</h6>
+                        <div class="row g-3">
+                            <div class="col-md-3 text-center">
+                                <h4 class="text-primary">45%</h4>
+                                <small>Wait time reduction</small>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <h4 class="text-success">92%</h4>
+                                <small>Patient satisfaction</small>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <h4 class="text-info">60%</h4>
+                                <small>Telemedicine adoption</small>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <h4 class="text-warning">30%</h4>
+                                <small>Administrative cost savings</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                        <a href="/pages/contact.html" class="btn btn-primary"
+                            >Start Your Project</a
+                        >
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Shape Divider at the bottom -->
-        <div class="hero-shape-divider">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M1200 120L0 120 0 0 1200 0 1200 120z" class="shape-fill"></path>
-            </svg>
-        </div>
-    </section>
 
-    <section class="py-5">
-        <div class="container text-center">
-            <h2 class="display-6 fw-bold mb-4">Healthcare Technology Solutions</h2>
-            <p class="lead mb-5">Comprehensive healthcare IT solutions for modern medical practices and institutions.</p>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <i class="bi bi-laptop display-4 text-primary mb-3"></i>
-                    <h5>Telemedicine Platforms</h5>
-                    <p class="text-muted">Virtual consultation and remote patient monitoring systems.</p>
-                </div>
-                <div class="col-md-4">
-                    <i class="bi bi-file-medical display-4 text-primary mb-3"></i>
-                    <h5>Electronic Health Records</h5>
-                    <p class="text-muted">Secure, compliant EHR systems with interoperability.</p>
-                </div>
-                <div class="col-md-4">
-                    <i class="bi bi-graph-up display-4 text-primary mb-3"></i>
-                    <h5>Healthcare Analytics</h5>
-                    <p class="text-muted">Data-driven insights for better patient outcomes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Footer -->
+        <div id="site-footer"></div>
 
-    <section class="py-5 bg-primary text-white text-center">
-        <div class="container">
-            <h2 class="display-6 fw-bold mb-4">Transform Healthcare with Technology</h2>
-            <p class="lead mb-4">Improve patient care and operational efficiency with our healthcare solutions.</p>
-            <a href="/pages/contact.html" class="btn btn-light btn-lg">Get Started</a>
-        </div>
-    </section>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Component Loader -->
+        <script src="/assets/js/components.js"></script>
+        <!-- Main JS -->
+        <script src="/assets/js/main.js"></script>
 
-    <div id="site-footer"></div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/components.js"></script>
-    <script src="/assets/js/main.js"></script>
-</body>
+        <!-- Component Loading Script -->
+        <script>
+            // Load testimonial-cta component
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch("/components/testimonial-cta.html")
+                    .then((response) => response.text())
+                    .then((html) => {
+                        document.getElementById(
+                            "testimonial-cta-section",
+                        ).innerHTML = html;
+                    });
+            });
+        </script>
+    </body>
 </html>

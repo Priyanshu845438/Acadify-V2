@@ -1,0 +1,177 @@
+<!-- Quote Request Modal -->
+<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title fw-bold" id="quoteModalLabel">
+                    <i class="bi bi-calculator me-2"></i>Get Your Free Quote
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body p-4">
+                <div class="text-center mb-4">
+                    <h6 class="text-muted">Tell us about your project and we'll provide you with a detailed quote</h6>
+                </div>
+                
+                <form id="quoteForm" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="quoteName" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="quoteName" name="name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="quoteEmail" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="quoteEmail" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="quotePhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="quotePhone" name="phone">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="quoteCompany" class="form-label">Company Name</label>
+                            <input type="text" class="form-control" id="quoteCompany" name="company">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="quoteService" class="form-label">Service Type *</label>
+                        <select class="form-select" id="quoteService" name="service_type" required>
+                            <option value="">Select a service</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="app-development">Mobile App Development</option>
+                            <option value="custom-development">Custom Software Development</option>
+                            <option value="ui-ux-design">UI/UX Design</option>
+                            <option value="digital-marketing">Digital Marketing</option>
+                            <option value="ecommerce">E-commerce Solution</option>
+                            <option value="enterprise-software">Enterprise Software</option>
+                            <option value="consulting">IT Consulting</option>
+                            <option value="maintenance">Maintenance & Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="quoteBudget" class="form-label">Project Budget</label>
+                            <select class="form-select" id="quoteBudget" name="project_budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-25k">Under ₹25,000</option>
+                                <option value="25k-50k">₹25,000 - ₹50,000</option>
+                                <option value="50k-100k">₹50,000 - ₹1,00,000</option>
+                                <option value="100k-250k">₹1,00,000 - ₹2,50,000</option>
+                                <option value="250k-500k">₹2,50,000 - ₹5,00,000</option>
+                                <option value="500k-plus">₹5,00,000+</option>
+                                <option value="discuss">Let's discuss</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="quoteTimeline" class="form-label">Project Timeline</label>
+                            <select class="form-select" id="quoteTimeline" name="project_timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">ASAP (Rush Job)</option>
+                                <option value="1-2-weeks">1-2 weeks</option>
+                                <option value="1-month">Within 1 month</option>
+                                <option value="2-3-months">2-3 months</option>
+                                <option value="3-6-months">3-6 months</option>
+                                <option value="6-months-plus">6+ months</option>
+                                <option value="flexible">I'm flexible</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="quoteDescription" class="form-label">Project Description</label>
+                        <textarea class="form-control" id="quoteDescription" name="project_description" rows="4" 
+                                  placeholder="Please describe your project requirements, goals, and any specific features you need..."></textarea>
+                    </div>
+                    
+                    <div id="quote-form-message" class="mb-3" style="display: none;"></div>
+                </form>
+            </div>
+            
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg me-2"></i>Cancel
+                </button>
+                <button type="submit" form="quoteForm" class="btn btn-primary btn-lg">
+                    <i class="bi bi-send me-2"></i>Send Quote Request
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Quote Form Handler
+document.addEventListener('DOMContentLoaded', function() {
+    const quoteForm = document.getElementById('quoteForm');
+    
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = this.closest('.modal-content').querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            const messageDiv = document.getElementById('quote-form-message');
+            
+            // Show loading state
+            submitButton.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending Request...';
+            submitButton.disabled = true;
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Submit to PHP handler
+            fetch('/handlers/quote_handler.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    messageDiv.innerHTML = `<div class="alert alert-success"><i class="bi bi-check-circle me-2"></i>${data.message}</div>`;
+                    messageDiv.style.display = 'block';
+                    
+                    submitButton.innerHTML = '<i class="bi bi-check-circle me-2"></i>Request Sent!';
+                    submitButton.classList.remove('btn-primary');
+                    submitButton.classList.add('btn-success');
+                    
+                    // Reset form after 3 seconds and close modal
+                    setTimeout(() => {
+                        this.reset();
+                        messageDiv.style.display = 'none';
+                        submitButton.innerHTML = originalText;
+                        submitButton.classList.remove('btn-success');
+                        submitButton.classList.add('btn-primary');
+                        submitButton.disabled = false;
+                        
+                        // Close the modal
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
+                        modal.hide();
+                    }, 3000);
+                } else {
+                    // Show error message
+                    messageDiv.innerHTML = `<div class="alert alert-danger"><i class="bi bi-exclamation-triangle me-2"></i>${data.message}</div>`;
+                    messageDiv.style.display = 'block';
+                    
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                messageDiv.innerHTML = '<div class="alert alert-danger"><i class="bi bi-exclamation-triangle me-2"></i>Sorry, there was an error sending your request. Please try again.</div>';
+                messageDiv.style.display = 'block';
+                
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            });
+        });
+    }
+});
+</script>

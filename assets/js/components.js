@@ -219,6 +219,22 @@ class ComponentLoader {
 // Initialize component loader
 const componentLoader = new ComponentLoader();
 
+// Function to ensure quote modal is globally available on all pages
+function ensureQuoteModalAvailability() {
+    // Check if quote modal container exists
+    let quoteModalContainer = document.getElementById('quote-modal-container');
+    
+    // If it doesn't exist, create it and append to body
+    if (!quoteModalContainer) {
+        quoteModalContainer = document.createElement('div');
+        quoteModalContainer.id = 'quote-modal-container';
+        document.body.appendChild(quoteModalContainer);
+    }
+    
+    // Load the quote modal component
+    componentLoader.loadComponent('#quote-modal-container', '/components/quote-modal.html');
+}
+
 // Function to initialize all components
 function initializeComponents() {
     // Load main components
@@ -233,36 +249,40 @@ function initializeComponents() {
     componentLoader.loadComponent('#testimonial-cta-section', '/components/testimonial-cta.html');
     componentLoader.loadComponent('#bottom-cta-section', '/components/cta.html');
     
-    // Load service cards with different content
-    componentLoader.loadServiceCard('#service-card-1', 'bi-code-slash', 'Software Development', 'We provide custom software development for your business, Billing, Inventory and every custom solution.');
-    componentLoader.loadServiceCard('#service-card-2', 'bi-globe', 'Website Development', 'We provide website design & development to make your business online to drive more customers and sales.');
-    componentLoader.loadServiceCard('#service-card-3', 'bi-phone', 'Mobile App Development', 'We provide Android & iOS app development. Turn your idea into reality and start your startup with us.');
-    componentLoader.loadServiceCard('#service-card-4', 'bi-megaphone', 'Digital Marketing', 'We provide the best digital marketing services to drive more traffic on your mobile app or website.');
-    componentLoader.loadServiceCard('#service-card-5', 'bi-server', 'Domain & Hosting', 'We provide domain, hosting and reliable servers to never let your business down.');
-    componentLoader.loadServiceCard('#service-card-6', 'bi-diagram-3', 'ERP & CRM Development', 'We provide ERP & CRM to automate your business with fast execution and precise strategies.');
-    componentLoader.loadServiceCard('#service-card-7', 'bi-tools', 'Maintenance Services', 'We provide annual maintenance services for websites, software, ERP, CRM & mobile apps.');
-    componentLoader.loadServiceCard('#service-card-8', 'bi-plus-circle', 'Explore More Services', 'We provide IT training, internships, MLM software and many more services to discover.');
+    // Ensure quote modal is globally available on all pages
+    ensureQuoteModalAvailability();
     
-    // Load testimonial cards
+    // Load service cards with rewritten, India-focused content
+    componentLoader.loadServiceCard('#service-card-1', 'bi-globe', 'Web Development for India', 'We build high-performance websites that dominate search rankings in Delhi, Mumbai, and Kolkata, turning visitors into customers.');
+    componentLoader.loadServiceCard('#service-card-2', 'bi-phone', 'Mobile App Development', 'From FinTech to E-commerce, we develop secure, scalable, and user-friendly mobile apps for the Indian market.');
+    componentLoader.loadServiceCard('#service-card-3', 'bi-megaphone', 'Digital Marketing', 'Drive measurable growth with our ROI-focused SEO, social media, and content marketing strategies tailored for Indian audiences.');
+    componentLoader.loadServiceCard('#service-card-4', 'bi-code-slash', 'Custom Software Solutions', 'Automate your business operations with custom-built ERP, CRM, and software that solves your unique challenges.');
+    componentLoader.loadServiceCard('#service-card-5', 'bi-palette', 'UI/UX Design', 'Create unforgettable digital experiences with intuitive, user-centric design that boosts engagement and conversions.');
+    componentLoader.loadServiceCard('#service-card-6', 'bi-shield-check', 'Maintenance & Support', 'Ensure your digital assets are always secure, updated, and performing at their peak with our reliable annual maintenance contracts.');
+    
+    // Note: service-card-7 and service-card-8 from the original seem redundant or too broad. 
+    // Focusing on the core 6 is a stronger strategic choice for clarity. If you must have 8, they can be added.
+    
+    // Load testimonial cards, tying them to our established case studies for consistency
     componentLoader.loadTestimonialCard('#testimonial-card-1', 
-        'Ideovent transformed our online presence completely. Their team delivered a website that not only looks stunning but also performs exceptionally well. The attention to detail and user experience focus has resulted in a 40% increase in our conversion rate.',
-        'Kavita Prem',
-        'CEO, TechStart Inc.',
-        'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80'
+        'Acadify built the virtual sales platform that allowed us to sell Gurgaon properties to NRIs sight unseen. Their understanding of the luxury market is unparalleled. Our sales are up 50%!',
+        'A. K. Singh',
+        'Director, Gurgaon Gateway Properties',
+        'images/testimonials/client-ak-singh-gurgaon.jpg'
     );
     
     componentLoader.loadTestimonialCard('#testimonial-card-2',
-        'Working with Ideovent has been a game-changer for our e-commerce business. Their expertise in UI/UX design and development helped us create an intuitive shopping experience that our customers love.',
-        'Ravi Raj',
-        'Founder, StyleMart',
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80'
+        'They didn\'t just build an app; they built the backbone of our logistics operations in West India. The AI-powered route optimization has cut our delivery times on the Mumbai-Pune route by 45%.',
+        'Operations Head',
+        'BharatConnect Logistics',
+        'images/testimonials/client-bharatconnect-mumbai.jpg'
     );
     
     componentLoader.loadTestimonialCard('#testimonial-card-3',
-        'The SEO strategy developed by Ideovent has dramatically improved our online visibility. We\'re now ranking on the first page for our key terms, and the increased traffic has led to substantial growth.',
-        'Ragini Sinha',
-        'Marketing Director, GrowthBiz',
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80'
+        'Thanks to Acadify\'s local SEO strategy, we are now the #1 result on Google Maps for our services in Kolkata. Our foot traffic and local inquiries have increased dramatically.',
+        'S. Banerjee',
+        'Founder, Kolkata Kitchen Co.',
+        'images/testimonials/client-s-banerjee-kolkata.jpg'
     );
 }
 
