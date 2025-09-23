@@ -630,3 +630,166 @@ html {
   color: #A06800; /* Darker shade on hover */
   text-decoration: underline !important;
 }
+
+/* ===================================================================
+   Final "Hybrid Blueprint" Design - Timeline & Tech Stack
+   (Refactored: Duplicates & Unused Code Removed)
+   =================================================================== */
+
+/* --- Technology Arsenal: Light Badges with Icons --- */
+.tech-badge {
+    display: inline-flex; 
+    align-items: center;  
+    padding: 0.5rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: var(--muted-gray);
+    background-color: #e9ecef;
+    border: 1px solid transparent;
+    border-radius: 50rem;
+    transition: var(--transition-base);
+}
+
+.tech-badge:hover {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    background-color: var(--white);
+}
+
+.tech-badge .bi {
+    transition: var(--transition-base);
+}
+
+/* --- Hybrid Alternating Vertical Timeline --- */
+.timeline-wrapper {
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* The central "spine" */
+.timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #dee2e6;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-item-left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item-right {
+    left: 50%;
+}
+
+/* The circular number marker on the spine */
+.timeline-marker {
+    position: absolute;
+    top: 1rem;
+    z-index: 2;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bs-light);
+    border: 2px solid var(--bs-primary);
+    border-radius: 50%;
+    color: var(--bs-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition-base);
+}
+
+.timeline-item-left .timeline-marker {
+    right: -25px; /* (width / 2) */
+}
+
+.timeline-item-right .timeline-marker {
+    left: -25px; /* (width / 2) */
+}
+
+.timeline-item:hover .step-number {
+    background-color: var(--bs-primary);
+    color: var(--white);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-hover);
+}
+
+/* The triangular pointer from the card */
+.timeline-content .card {
+    position: relative;
+    text-align: left; /* Ensure text is always left-aligned inside the card */
+}
+
+.timeline-content .card::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline-item-left .card::before {
+    right: -10px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--white);
+}
+
+.timeline-item-right .card::before {
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--white) transparent transparent;
+}
+
+
+/* --- Responsive Adjustments for Timeline on Mobile --- */
+@media (max-width: 767.98px) {
+    .timeline-wrapper::before {
+        left: 25px; /* Move spine to the left */
+        transform: translateX(0);
+    }
+    
+    .timeline-item,
+    .timeline-item-right {
+        width: 100%;
+        left: 0;
+        padding-left: 4.5rem; /* Space for the spine and marker */
+        padding-right: 1rem;
+    }
+    
+    .timeline-item-left {
+        text-align: left;
+    }
+
+    .timeline-item-left .timeline-marker,
+    .timeline-item-right .timeline-marker {
+        left: 0;
+    }
+    
+    .timeline-item-left .card::before,
+    .timeline-item-right .card::before {
+        left: -10px;
+        right: auto;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--white) transparent transparent;
+    }
+}
