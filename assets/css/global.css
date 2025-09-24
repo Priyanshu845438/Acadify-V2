@@ -88,43 +88,94 @@ p, li, span {
 }
 
 /* New Flush Hero Section - Premium Design */
+/* Revamped hero section for a more modern, dynamic look */
+/* Revamped hero section for a modern, dynamic, full-viewport look */
 .hero-flush {
   position: relative;
-  background-color: #0d3169;
-  padding: 6rem 0; /* Generous padding for content */
-  margin-top: 0; /* Ensures flush with navbar */
-  /* This pseudo-element creates the subtle tech pattern */
-  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  /* Use viewport units to always fill the screen */
+  min-height: 100vh;
+  width: 100vw;
+  
+  /* Deeper, more saturated blue for a richer feel */
+  background-color: #0c2b5d;
+  
+  /* Add a subtle, pulsating grid pattern */
+  background-image: 
+    linear-gradient(to bottom, rgba(12, 43, 93, 0.95), rgba(16, 52, 114, 0.98)),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 20px 20px;
-  padding-bottom: 160px;
+  
+  /* Center the content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 4rem 1rem; /* Adjust padding for smaller screens */
+  margin-top: 0;
+  overflow: hidden; /* Essential for containing visual effects */
 }
 
-/* Style the visual element to pop */
-.hero-flush .hero-visual {
-  filter: drop-shadow(0 1rem 3rem rgba(0,0,0,0.3)); /* Soft glow effect */
-}
-
-/* The shape divider for the elegant transition */
-.hero-shape-divider {
+/* Subtle background animation for a dynamic, "breathing" effect */
+.hero-flush::before {
+  content: '';
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg); /* Flips the SVG */
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  animation: pulse-light 10s infinite ease-in-out;
+  pointer-events: none;
 }
 
-.hero-shape-divider svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 80px; /* Adjust height of the curve */
+@keyframes pulse-light {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
 }
 
-.hero-shape-divider .shape-fill {
-  fill: #FFFFFF; /* This should be the color of the NEXT section */
+/* Add a radial light effect from the top center for focus */
+.hero-flush::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Wrapper handles floating */
+.hero-flush .hero-visual-wrapper {
+  animation: float-up 5s ease-in-out infinite alternate;
+  display: inline-block;
+}
+
+/* Actual visual handles zoom */
+.hero-flush .hero-visual {
+  filter: drop-shadow(0 2rem 5rem rgba(0, 0, 0, 0.6));
+  border-radius: 20px;
+  transition: transform 1.5s ease-in-out;
+}
+
+/* Hover zoom */
+.hero-flush .hero-visual:hover {
+  transform: scale(1.05);
+}
+
+/* Float keyframes only affect wrapper */
+@keyframes float-up {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+/* The shape divider is not needed for a full-viewport design as it transitions directly to the next section's content. */
+.hero-shape-divider {
+  display: none;
 }
 
 /* --- MOBILE RESPONSIVE --- */
